@@ -1,0 +1,220 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  background: #fff;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.logo-circle {
+  width: 32px;
+  height: 32px;
+  background: #c6a5f5; 
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #000;
+  font-family: cursive;
+  text-decoration: none;
+  cursor: pointer;      
+}
+.logo-circle:hover {
+  background: #b28ae6; 
+}
+.logo-text {
+  font-family: cursive;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #000;
+}
+
+header nav {
+  display: flex;
+  gap: 12px; 
+}
+.login-btn, .register-btn {
+  background: #6a1b9a; 
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.register-btn {
+  background: #6a1b9a; 
+}
+
+main {
+  padding: 2rem;
+}
+.tag {
+  background: #6a1b9a;
+  color: #fff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 5px;
+}
+h1 {
+  margin: 1rem 0;
+  font-size: 1.8rem;
+}
+.highlight { color: #6a1b9a; font-weight: bold; }
+.buttons { margin: 1.5rem 0; }
+
+button.primary, button.support,
+a.primary, a.support {
+  background: #6a1b9a;
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: #fff;
+  color: #6a1b9a;
+  border: 2px solid #6a1b9a;
+  padding: 0.7rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.stats {
+  margin: 2rem 0;
+  font-weight: bold;
+  color: #6a1b9a;
+  display: flex;
+  gap: 2rem;
+}
+
+.counters {
+  background: #c8e6c9;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+}
+
+.explorar, .adopcion {
+  padding: 2rem;
+  background: #fafafa;
+}
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+.filter.active { background: #6a1b9a; color: #fff; }
+
+/* Ajuste para que las tarjetas se alineen */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 1.5rem;
+  align-items: stretch; /* todas las columnas se estiran */
+}
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* botón siempre abajo */
+}
+.card img {
+  width: 100%;
+  height: 200px;        
+  object-fit: cover;   
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+.card span { color: #6a1b9a; font-weight: bold; }
+
+.formulario h2 { text-align: center; color: #6a1b9a; }
+.formulario label { display: block; margin-top: 1rem; font-weight: bold; }
+.formulario input, .formulario textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.funciona {
+  padding: 2rem;
+  background: #fdf6f0;
+}
+.funciona h2 { color: #6a1b9a; }
+.steps { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+.step { flex: 1; background: #fff; padding: 1rem; border-radius: 8px; border: 1px solid #eee; }
+.step h3 { color: #ff7043; font-size: 1.5rem; }
+
+.empresas-dark {
+  background: #222;
+  color: #fff;
+  padding: 2rem;
+}
+.empresas-dark h2 { color: #fce833; }
+.empresas-dark h3 { margin: 0.5rem 0; }
+.empresas-dark .h3_barrio { color: #fce833; }
+.empresas-dark .h3_inverti { color: #faf4bb; }
+.empresas-dark p { color: #faf4bb; }
+
+.empresas-dark ul { margin-top: 1rem; list-style: none; padding: 0; }
+.empresas-dark li::before {
+  content: "✔ ";
+  color: #ffeb3b;
+}
+.empresas-purple {
+  background: #6a1b9a;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+.empresas-purple button { margin-top: 1rem; }
+
+footer {
+  background: #222;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+footer nav a { color: #fff; text-decoration: none; margin: 0 0.5rem; }
+
+.ofrecer {
+  display: flex;
+  justify-content: center; /* lo centra horizontalmente */
+  margin-top: 2rem;        /* espacio respecto a las tarjetas */
+}
+
+.ofrecer a.primary {
+  background: #6a1b9a;
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+}
+
