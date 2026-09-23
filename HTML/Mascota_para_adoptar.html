@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mascota para adoptar</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma/css/bulma.min.css">
+    <link rel="stylesheet" href="../CSS/Mascota_para_adoptar.css">
+</head>
+
+<body>
+    <section class="section">
+        <div class="container box">
+
+            <h1 class="title has-text-centered">MASCOTA PARA ADOPTAR</h1>
+
+            <div class="logo">
+                <div class="logo-circulo"><em>M</em></div>
+                <span>MINKA</span>
+            </div>
+
+            <h3 class="title is-5">Datos del colaborador</h3>
+            <div class="form-row">
+                <div class="field">
+                    <label for="nombreMascota">Nombre de la mascota</label>
+                    <input type="text" id="nombreMascota" name="nombreMascota" placeholder="Nombre de la mascota">
+                </div>
+
+                <div class="field">
+                    <label for="edadMascota">Edad de la mascota</label>
+                    <input type="number" id="edadMascota" name="edadMascota" placeholder="Edad de la mascota">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="field">
+                    <label for="telefono">Teléfono de contacto</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Número de contacto">
+                </div>
+
+                <div class="field">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" placeholder="Correo electrónico">
+                </div>
+            </div>
+
+            <div class="form-row full-width">
+                <div class="field">
+                    <label for="especie">Especie</label>
+                    <input type="text" id="especie" name="especie" placeholder="Ingrese la especie">
+                </div>
+            </div>
+
+            <!-- Información adicional -->
+            <h3 class="title is-5">Información adicional</h3>
+            <div class="form-row full-width">
+                <div class="field">
+                    <label for="vacunas">Vacunas</label>
+                    <input type="text" id="vacunas" name="vacunas" placeholder="Ingrese las vacunas">
+                </div>
+            </div>
+
+            <div class="form-row full-width">
+                <div class="field">
+                    <label for="historia">Historia</label>
+                    <input type="text" id="historia" name="historia" placeholder="Escribe la historia">
+                </div>
+            </div>
+
+            <div class="form-row full-width">
+                <div class="field">
+                    <label for="sexo">Sexo</label>
+                    <input type="text" id="sexo" name="sexo" placeholder="Ingrese el sexo">
+                </div>
+            </div>
+
+            <div class="form-row full-width">
+                <div class="field">
+                    <label for="raza">Raza</label>
+                    <input type="text" id="raza" name="raza" placeholder="Ingrese la raza">
+                </div>
+            </div>
+
+            <div class="field">
+                <label for="color">Color y características físicas distintivas</label>
+                <input type="text" id="color" name="color" placeholder="Color y características físicas distintivas">
+            </div>
+
+            <div class="field">
+                <label for="fechaNacimiento">Fecha de nacimiento de la mascota</label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento">
+            </div>
+
+            <!-- Subida de archivos -->
+            <h3 class="title is-5">Importante</h3>
+            <div class="upload-box">
+                <span>Subir fotos o documentos</span>
+                <label class="upload-btn" for="archivo">Seleccionar archivos</label>
+                <input type="file" id="archivo" name="archivo" multiple hidden>
+            </div>
+
+            <!-- Botón enviar -->
+            <div class="field has-text-centered">
+                <button class="button is-success is-medium">Enviar</button>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="../JS/mascota_para_adoptar.js"></script>
+
+</body>
+
+</html>

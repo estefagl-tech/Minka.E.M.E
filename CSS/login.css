@@ -1,0 +1,111 @@
+/* Fondo general */
+.fondo {
+  background: linear-gradient(135deg, #8389F2, #8389F2);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+/* Caja del formulario */
+.registro {
+  position: relative;
+  background-color: #B8A9D9;
+  padding: 30px;
+  border-radius: 12px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: cursive;
+}
+
+/* Logo inferior */
+.logo {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.logo-circulo {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #8389F2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.logo span {
+  font-family: cursive;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Inputs */
+.input {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding-left: 36px;
+}
+
+input::placeholder {
+  font-family: cursive;
+  font-style: italic;
+}
+
+/* Íconos */
+.fa-user {
+  color: #1877F2;
+}
+
+.fa-lock {
+  color: #FFD700;
+}
+
+/* Botón principal */
+.button.boton-registro {
+  background-color: #8389F2;
+  color: black;
+  border: none;
+  width: 200px;
+  padding: 10px;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  display: block;
+  font-family: cursive;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.button.boton-registro:hover {
+  background-color: #6a72d8;
+  color: white;
+}
+
+/* Botones sociales */
+.button.is-light.is-fullwidth {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Imagen lateral */
+.image.is-fullheight img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Subtítulos */
+.subtitle {
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}

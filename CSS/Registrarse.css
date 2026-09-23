@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+}
+
+.fondo {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #8389F2, #8389F2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+/* Caja principal */
+.registro {
+    position: relative;
+    width: 800px;
+    padding: 40px;
+    background-color: #B8A9D9;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+/* Título */
+.title.has-text-centered {
+    font-size: 2rem;
+    color: #4a0072;
+    margin-bottom: 1.5rem;
+    font-family: cursive;
+}
+
+/* Botón */
+.boton-registro {
+    background-color: #8389F2;
+    color: black;
+    border: none;
+    width: 200px;
+    padding: 10px;
+    font-size: 1.2rem;
+    margin: 20px auto 0 auto;
+    display: block;
+    font-family: cursive;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.boton-registro:hover {
+    background-color: #6a72d8;
+    color: white;
+}
+
+/* Logo */
+.logo {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.logo-circulo {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #8389F2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.logo span {
+    font-family: cursive;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Inputs */
+.input,
+.select select {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 0.6rem;
+}
+
+.input:focus,
+.select select:focus {
+    border-color: #874FFF;
+    box-shadow: 0 0 5px rgba(135, 79, 255, 0.5);
+}
+
+input::placeholder {
+    font-family: cursive;
+    font-style: italic;
+}
+
+/* Estrellas decorativas */
+.estrella {
+    width: 40px;
+    height: 40px;
+    background: #c6a5f5;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%,
+            68% 57%, 79% 91%, 50% 70%,
+            21% 91%, 32% 57%, 2% 35%,
+            39% 35%);
+    position: absolute;
+}

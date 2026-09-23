@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Adoptar!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma/css/bulma.min.css">
+    <link rel="stylesheet" href="../CSS/Adopcion.css">
+</head>
+
+<body>
+    <section class="section">
+        <div class="container box">
+            <!-- Encabezado -->
+            <h1 class="title has-text-centered">ADOPCIÓN</h1>
+
+            <div class="logo">
+                <div class="logo-circulo"><em>M</em></div>
+                <span>MINKA</span>
+            </div>
+
+            <h3 class="title is-5">Datos del solicitante</h3>
+            <div class="form-row">
+                <div class="field">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre completo">
+                </div>
+                <div class="field">
+                    <label for="documento">Documento de identidad</label>
+                    <input type="text" id="documento" name="documento" placeholder="Documento de identidad">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="field">
+                    <label for="telefono">Teléfono de contacto</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Número de contacto">
+                </div>
+                <div class="field">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" placeholder="Correo electrónico">
+                </div>
+            </div>
+
+            <div class="form-row full-width">
+                <div class="field">
+                    <label for="direccion">Dirección (opcional)</label>
+                    <input type="text" id="direccion" name="direccion" placeholder="Dirección">
+                </div>
+            </div>
+
+            <h3 class="title is-5">REQUISITOS DE ADOPCIÓN</h3>
+            <div class="requisitos">
+                <label><input type="checkbox"> Completar el formulario de adopción</label>
+                <label><input type="checkbox"> Espacio adecuado y seguro para la mascota</label>
+                <label><input type="checkbox"> Compromiso a brindar alimentación, cuidados y atención
+                    veterinaria</label>
+                <label><input type="checkbox"> Firmar compromiso o contrato de adopción</label>
+                <label><input type="checkbox"> Aceptar a la mascota como parte de la familia y quererlo mucho</label>
+            </div>
+
+            <!-- Línea separadora -->
+            <hr class="separador">
+
+            <div class="form-row full-width">
+                <label>
+                    <input type="checkbox" name="acepto">
+                    Acepto que la información proporcionada será utilizada para evaluar mi solicitud de adopción
+                </label>
+            </div>
+
+
+            <div class="field has-text-centered">
+                <button class="button is-success is-medium">Enviar datos</button>
+            </div>
+        </div>
+    </section>
+    <script></script>
+    <script src="../JS/adopcion.js"></script>
+</body>
+
+</html>
