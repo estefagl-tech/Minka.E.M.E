@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CUAL ES TU PROYECTO?</title>
+ <link rel="stylesheet" href="../minka css/miproyecto.css">
+ <link rel="stylesheet" href="../minka js/miproyecto.js">
+</head>
+<body>
+  <section class="section">
+    
+    <div class="logo">
+        <div class="logo-circulo"><em>M</em></div>
+        <span>MINKA</span>
+      </div>
+
+    <div class="container">
+     
+      <h1 class="title has-text-centered">CUAL ES TU PROYECTO?</h1>
+
+      <form id="proyectoForm">
+
+        <h3 class="title is-5">Datos del Solicitante</h3>
+        <div class="field"><label>Nombre completo</label><input class="input" type="text" name="nombre"></div>
+        <div class="field"><label>Documento de identidad</label><input class="input" type="text" name="documento"></div>
+        <div class="field"><label>Teléfono de Contacto</label><input class="input" type="tel" name="telefono"></div>
+        <div class="field"><label>Correo Electrónico</label><input class="input" type="email" name="correo"></div>
+        <div class="field"><label>Dirección (Opcional)</label><input class="input" type="text" name="direccion"></div>
+
+
+        <h3 class="title is-5">Información de la Causa</h3>
+        <div class="field"><label>Título de la Causa</label><input class="input" type="text" name="titulo"></div>
+        <div class="field"><label>Describe la situación y la ayuda que se necesita</label><textarea class="textarea" name="descripcion"></textarea></div>
+        <div class="field"><label>Objetivo de la Causa</label><input class="input" type="text" name="objetivo"></div>
+        <div class="field"><label>Tipo de Ayuda</label><input class="input" type="text" name="tipo"></div>
+        <div class="field"><label>Fecha Límite</label><input class="input" type="date" name="fecha"></div>
+
+        <h3 class="title is-5">Evidencia y Soporte</h3>
+        <div class="field"><label>Subir fotos o documentos</label><input class="input" type="file" multiple></div>
+        <div class="field"><label>Enlaces a Redes Sociales / Sitio Web</label><input class="input" type="url" name="url"></div>
+
+        <h3 class="title is-5">Opciones de Participación</h3>
+        <label><input type="checkbox" name="donaciones"> Permitir donaciones</label><br>
+        <label><input type="checkbox" name="compartir"> Permitir que compartan la causa</label><br>
+        <label><input type="checkbox" name="contacto"> Permitir contacto directo</label>
+
+ 
+        <div class="field" style="margin-top:1rem;">
+          <label><input type="checkbox" name="acepto"> Acepto que la información será publicada en la página de ayudas.</label>
+        </div>
+
+        <div class="field has-text-centered">
+          <button class="button is-success">Enviar Causa</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
