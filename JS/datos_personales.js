@@ -3,6 +3,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const cerrarBtn = document.getElementById("cerrarBtn");
   const volverBtn = document.getElementById("volverBtn");
 
+  // 🔹 Recuperar datos guardados en localStorage
+  const nombre = localStorage.getItem("usuarioNombre");
+  const correo = localStorage.getItem("usuarioCorreo");
+
+  if (nombre) {
+    document.getElementById("nombre").value = nombre;
+  }
+  if (correo) {
+    document.getElementById("correo").value = correo;
+  }
+
   cambiarBtn.addEventListener("click", () => {
     Swal.fire({
       icon: "info",

@@ -24,6 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
       text: `Bienvenido/a ${nombre} 🎉`
     }).then(() => {
       localStorage.setItem("usuarioNombre", nombre);
+      localStorage.setItem("usuarioCorreo", correo);
+
       window.location.href = "../home/home.html";
     });
   });
