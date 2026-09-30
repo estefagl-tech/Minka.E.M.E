@@ -1,45 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
-  <link rel="stylesheet" href="..//CSS/datos_personales.css">
-
   <title>Datos Personales</title>
+  <link rel="stylesheet" href="../CSS/datos_personales.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
-
-  <div class="fondo">
+  <section class="fondo">
     <div class="perfil-box">
-
       <div class="logo">
-        <div class="logo-circulo"><em>M</em></div>
+        <div class="logo-circulo">M</div>
         <span>MINKA</span>
       </div>
 
-      <h1 class="title has-text-centered">DATOS PERSONALES</h1>
-
+      <h1 class="titulo">Datos Personales</h1>
 
       <label for="nombre">Nombre</label>
-      <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+      <input type="text" id="nombre" placeholder="Nombre completo">
 
-      <label for="correo">Correo</label>
-      <input type="email" id="correo" name="correo" placeholder="tunombre@gmail.com">
+      <label for="correo">Correo electrónico</label>
+      <input type="email" id="correo" placeholder="tunombre@gmail.com">
 
       <div class="botones">
-        <button class="btn">Cambiar Contraseña</button>
-        <button class="btn">Cerrar Sesión</button>
+        <button class="btn-primario" id="cambiarBtn">Cambiar Contraseña</button>
+        <button class="btn-secundario" id="cerrarBtn">Cerrar Sesión</button>
       </div>
 
-      <button class="btn volver">Volver</button>
+      <button class="btn-volver" id="volverBtn" data-link="../home/home.html">Volver</button>
+
     </div>
-  </div>
+  </section>
 
   <script src="../JS/datos_personales.js"></script>
-
 </body>
 
 </html>

@@ -1,170 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
-    <link rel="stylesheet" href="..//CSS/Registrarse.css">
-    <title>Registro</title>
+  <meta charset="UTF-8">
+  <title>Registro</title>
+  <link rel="stylesheet" href="../CSS/registrarse.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
-
 <body>
+  <section class="fondo">
+    <div class="formulario">
+      <h1 class="titulo">Registrarse</h1>
+      <p class="subtitulo">Completa tus datos personales</p>
 
-    <div class="fondo">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" placeholder="Nombre">
 
-        <div class="registro">
+      <label for="apellidos">Apellidos</label>
+      <input type="text" id="apellidos" placeholder="Apellidos">
 
-            <h1 class="title has-text-centered">REGISTRARSE</h1>
+      <label for="tipoDocumento">Tipo de documento</label>
+      <select id="tipoDocumento">
+        <option>Cédula de ciudadanía</option>
+        <option>Tarjeta de identidad</option>
+        <option>Cédula de extranjería</option>
+        <option>Pasaporte</option>
+      </select>
 
+      <label for="numeroDocumento">Número de documento</label>
+      <input type="number" id="numeroDocumento" placeholder="Número de documento">
 
-            <div class="columns">
+      <label for="departamento">Departamento</label>
+      <input type="text" id="departamento" placeholder="Departamento">
 
-                <div class="column">
-                    <div class="field">
-                        <label class="label">Nombre</label>
-                        <div class="control">
-                            <input class="input" type="text" placeholder="Nombre">
-                        </div>
-                    </div>
-                </div>
+      <label for="municipio">Municipio</label>
+      <input type="text" id="municipio" placeholder="Municipio">
 
-                <div class="column">
-                    <div class="field">
-                        <label class="label">Apellidos</label>
-                        <div class="control">
-                            <input class="input" type="email" placeholder="Apellidos">
-                        </div>
-                    </div>
-                </div>
+      <label for="telefono">Teléfono</label>
+      <input type="tel" id="telefono" placeholder="Teléfono">
 
-            </div>
+      <label for="correo">Correo electrónico</label>
+      <input type="email" id="correo" placeholder="tunombre@gmail.com">
 
+      <label for="contraseña">Contraseña</label>
+      <input type="password" id="contraseña" placeholder="Contraseña">
 
+      <button class="btn-primario" id="continuarBtn">Continuar</button>
+      <button class="btn-secundario" onclick="window.location.href='../HTML/login.html'">Iniciar sesion</button>
 
-            <div class="columns">
-
-                <div class="column">
-                    <label class="label">Tipo de documento</label>
-                    <div class="control">
-                        <div class="select" aria-placeholder="Tipo de documento">
-                            <select>
-                                <option>Cédula de ciudadanía</option>
-                                <option>Tarjeta de identidad</option>
-                                <option>Cédula de extranjería</option>
-                                <option>Pasaporte</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="column">
-                    <div class="field">
-                        <label class="label">Número de documento</label>
-                        <div class="control">
-                            <input class="input" type="number" placeholder="Numero de documento">
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-
-            <div class="columns">
-
-                <div class="column">
-                    <div class="field">
-                        <label class="label">Departamento</label>
-                        <div class="control">
-                            <input class="input" type="text" placeholder="Departamento">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="column">
-                    <div class="field">
-                        <label class="label">Municipio</label>
-                        <div class="control">
-                            <input class="input" type="text" placeholder="Municipio">
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-
-            <div class="columns">
-
-                <div class="column">
-                    <div class="field">
-                        <label class="label">Dirección</label>
-                        <div class="control">
-                            <input class="input" type="text" placeholder="Direción">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="column">
-                    <div class="field">
-                        <label class="label">Telefono</label>
-                        <div class="control">
-                            <input class="input" type="tel" placeholder="Telefono">
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-
-            <div class="columns">
-
-                <div class="column">
-                    <div class="field">
-                        <label class="label">Correo electrónico</label>
-                        <div class="control">
-                            <input class="input" type="email" placeholder="tunombre@gmail.com">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="column">
-                    <div class="field">
-                        <label class="label">Contraseña</label>
-                        <div class="control">
-                            <input class="input" type="password" placeholder="Contraseña">
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-
-            <button class="button boton-registro">
-                Continuar
-            </button>
-
-
-            <div class="logo">
-                <div class="logo-circulo">M</div>
-                <span>MINKA</span>
-            </div>
-
-
-
-            <div class="estrella" style="top:20px; left:30px;"></div>
-            <div class="estrella" style="top:100px; left:200px;"></div>
-
-
-        </div>
-
+      <div class="logo">
+        <div class="logo-circulo">M</div>
+        <span>MINKA</span>
+      </div>
     </div>
-
-    <script src="../JS/registrarse.js"></script>
-
+  </section>
+  <script src="../JS/registrarse.js"></script>
 </body>
-
 </html>

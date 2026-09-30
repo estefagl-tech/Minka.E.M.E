@@ -1,17 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const loginBtn = document.querySelector(".boton-registro");
+  const loginBtn = document.getElementById("loginBtn");
 
-    loginBtn.addEventListener("click", (e) => {
-        e.preventDefault();
+  loginBtn.addEventListener("click", (e) => {
+    e.preventDefault();
 
-        const usuario = document.querySelector("input[type='text']").value.trim();
-        const password = document.querySelector("input[type='password']").value.trim();
+    const usuario = document.getElementById("usuario").value.trim();
+    const password = document.getElementById("password").value.trim();
 
-        if (!usuario || !password) {
-            alert("Debes ingresar usuario y contraseña.");
-            return;
-        }
+    if (!usuario || !password) {
+      Swal.fire({
+        icon: "error",
+        title: "Campos vacíos",
+        text: "Debes ingresar usuario y contraseña."
+      });
+      return;
+    }
 
-        alert(`Bienvenido, ${usuario} 🎉`);
+    Swal.fire({
+      icon: "success",
+      title: "Bienvenido",
+      text: `Hola ${usuario} 🎉`
+    }).then(() => {
+      localStorage.setItem("usuarioNombre", usuario);
+      window.location.href = "../home/home.html";
     });
+  });
 });

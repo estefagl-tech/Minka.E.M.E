@@ -24,6 +24,13 @@ if (explorarBtn) {
 }
 
 const supportButtons = document.querySelectorAll(".support");
-const formulario = document.getElementById("formulario")
+const formulario = document.getElementById("formulario");
 
+document.addEventListener("DOMContentLoaded", () => {
+  const nombre = localStorage.getItem("usuarioNombre");
+  const usuarioSpan = document.getElementById("usuario");
 
+  if (usuarioSpan) {
+    usuarioSpan.textContent = nombre ? `👤 ${nombre}` : "";
+  }
+});

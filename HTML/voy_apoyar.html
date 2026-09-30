@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Voy a Apoyar</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma/css/bulma.min.css">
+  <link rel="stylesheet" href="../CSS/voy_apoyar.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <section class="section">
+    <div class="container box">
+      <h1 class="title has-text-centered">VOY A APOYAR</h1>
+
+      <div class="logo">
+        <div class="logo-circulo"><em>M</em></div>
+        <span>MINKA</span>
+      </div>
+
+      <form id="apoyoForm">
+        <h3 class="title is-5">Datos del colaborador</h3>
+        <div class="form-row">
+          <div class="field">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre completo">
+          </div>
+          <div class="field">
+            <label for="documento">Documento de identidad</label>
+            <input type="text" id="documento" name="documento" placeholder="Documento de identidad">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="telefono">Teléfono de contacto</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Número de contacto">
+          </div>
+          <div class="field">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" placeholder="Correo electrónico">
+          </div>
+        </div>
+
+        <div class="form-row full-width">
+          <div class="field">
+            <label for="direccion">Dirección (opcional)</label>
+            <input type="text" id="direccion" name="direccion" placeholder="Dirección">
+          </div>
+        </div>
+
+        <h3 class="title is-5">Tipo de apoyo</h3>
+        <div class="form-row">
+          <div class="field">
+            <label for="apoyo">Seleccione tipo de apoyo</label>
+            <input type="text" id="apoyo" name="apoyo" placeholder="Ej. donación económica, especie, voluntariado...">
+          </div>
+          <div class="field">
+            <label for="monto">Monto o disponibilidad</label>
+            <input type="text" id="monto" name="monto" placeholder="Cantidad o disponibilidad">
+          </div>
+        </div>
+
+        <div class="form-row full-width">
+          <div class="field">
+            <label for="fecha">Fecha estimada de apoyo</label>
+            <input type="date" id="fecha" name="fecha">
+          </div>
+        </div>
+
+        <h3 class="title is-5">Detalles de contacto</h3>
+        <div class="form-row">
+          <div class="field">
+            <label for="metodo">Método de entrega/transferencia</label>
+            <input type="text" id="metodo" name="metodo" placeholder="Ej. depósito, punto de encuentro">
+          </div>
+          <div class="field">
+            <label for="preferencia">Preferencia de contacto</label>
+            <select id="preferencia" name="preferencia" class="input">
+              <option>Email</option>
+              <option>Teléfono</option>
+              <option>WhatsApp</option>
+              <option>Otro</option>
+            </select>
+          </div>
+        </div>
+
+        <hr class="separador">
+
+        <div class="form-row full-width">
+          <label>
+            <input type="checkbox" id="acepto" name="acepto">
+            Acepto que la información proporcionada será utilizada solo para coordinar el apoyo
+          </label>
+        </div>
+
+        <div class="field has-text-centered">
+          <button class="button is-success is-medium" id="enviarBtn">Enviar datos</button>
+          <a href="../home/home.html" class="button-volver" id="homeBtn">Volver</a>
+        </div>
+      </form>
+    </div>
+  </section>
+  <script src="../JS/voy_apoyar.js"></script>
+</body>
+</html>

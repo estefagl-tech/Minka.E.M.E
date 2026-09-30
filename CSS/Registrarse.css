@@ -1,114 +1,104 @@
 body {
-    margin: 0;
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #8389F2, #B8A9D9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.fondo {
-    min-height: 100vh;
-    background: linear-gradient(135deg, #8389F2, #8389F2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
+.formulario {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.15);
+  width: 400px;
+  position: relative;
 }
 
-/* Caja principal */
-.registro {
-    position: relative;
-    width: 800px;
-    padding: 40px;
-    background-color: #B8A9D9;
-    border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
+.titulo {
+  text-align: center;
+  color: #5a3ea1;
+  margin-bottom: 10px;
 }
 
-/* Título */
-.title.has-text-centered {
-    font-size: 2rem;
-    color: #4a0072;
-    margin-bottom: 1.5rem;
-    font-family: cursive;
+.subtitulo {
+  text-align: center;
+  color: #666;
+  margin-bottom: 20px;
 }
 
-/* Botón */
-.boton-registro {
-    background-color: #8389F2;
-    color: black;
-    border: none;
-    width: 200px;
-    padding: 10px;
-    font-size: 1.2rem;
-    margin: 20px auto 0 auto;
-    display: block;
-    font-family: cursive;
-    font-weight: bold;
-    border-radius: 8px;
-    transition: background 0.3s ease;
+label {
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-top: 10px;
 }
 
-.boton-registro:hover {
-    background-color: #6a72d8;
-    color: white;
+input, select {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.6rem;
+  margin-top: 5px;
+  margin-bottom: 15px;
 }
 
-/* Logo */
+input:focus, select:focus {
+  border-color: #5a3ea1;
+  box-shadow: 0 0 5px rgba(90,62,161,0.5);
+  outline: none;
+}
+
+.btn-primario {
+  background-color: #5a3ea1;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-primario:hover {
+  background-color: #4a2f8c;
+}
+
+.btn-secundario {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-secundario:hover {
+  background-color: #3e8e41;
+}
+
 .logo {
-    position: absolute;
-    bottom: 15px;
-    right: 20px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 14px;
+  margin-top: 20px;
+  text-align: center;
+  color: #5a3ea1;
+  font-weight: bold;
 }
 
 .logo-circulo {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color: #8389F2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    font-style: italic;
-    font-weight: bold;
-}
-
-.logo span {
-    font-family: cursive;
-    font-weight: bold;
-    font-style: italic;
-}
-
-/* Inputs */
-.input,
-.select select {
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    padding: 0.6rem;
-}
-
-.input:focus,
-.select select:focus {
-    border-color: #874FFF;
-    box-shadow: 0 0 5px rgba(135, 79, 255, 0.5);
-}
-
-input::placeholder {
-    font-family: cursive;
-    font-style: italic;
-}
-
-/* Estrellas decorativas */
-.estrella {
-    width: 40px;
-    height: 40px;
-    background: #c6a5f5;
-    clip-path: polygon(50% 0%, 61% 35%, 98% 35%,
-            68% 57%, 79% 91%, 50% 70%,
-            21% 91%, 32% 57%, 2% 35%,
-            39% 35%);
-    position: absolute;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #8389F2;
+  color: #fff;
+  font-weight: bold;
+  line-height: 25px;
+  text-align: center;
+  margin-right: 5px;
 }

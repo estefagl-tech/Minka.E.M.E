@@ -48,16 +48,10 @@ header nav {
   display: flex;
   gap: 12px; 
 }
-.login-btn, .register-btn {
-  background: #6a1b9a; 
-  color: #fff;
-  padding: 0.6rem 1.2rem;
-  border-radius: 5px;
-  text-decoration: none;
+
+.usuario {
   font-weight: bold;
-}
-.register-btn {
-  background: #6a1b9a; 
+  color: #6a1b9a;
 }
 
 main {
@@ -76,16 +70,35 @@ h1 {
 .highlight { color: #6a1b9a; font-weight: bold; }
 .buttons { margin: 1.5rem 0; }
 
-button.primary, button.support,
-a.primary, a.support {
+.buttons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+a.primary, button.primary {
   background: #6a1b9a;
   color: #fff;
-  padding: 0.7rem 1.2rem;
-  border-radius: 5px;
+  padding: 0.75rem 1.4rem;
+  border-radius: 6px;
   font-weight: bold;
+  font-size: 0.9rem;
+  font-family: inherit;
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none; 
+  outline: none;
   cursor: pointer;
+  box-sizing: border-box;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+a.primary:hover, button.primary:hover {
+  background: #4a0f7a;
+  transform: scale(1.03);
 }
 
 button.secondary {
@@ -117,20 +130,37 @@ button.secondary {
   padding: 2rem;
   background: #fafafa;
 }
+
 .filters {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 2rem;
 }
-.filter.active { background: #6a1b9a; color: #fff; }
+button.filter {
+  background: #fff;
+  color: #6a1b9a;
+  border: 2px solid #6a1b9a;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+button.filter:hover {
+  background: #6a1b9a;
+  color: #fff;
+}
+button.filter.active {
+  background: #6a1b9a;
+  color: #fff;
+}
 
-/* Ajuste para que las tarjetas se alineen */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
   gap: 1.5rem;
-  align-items: stretch; /* todas las columnas se estiran */
+  align-items: stretch;
 }
 .card {
   background: #fff;
@@ -140,7 +170,12 @@ button.secondary {
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* botón siempre abajo */
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 .card img {
   width: 100%;
@@ -150,6 +185,22 @@ button.secondary {
   margin-bottom: 1rem;
 }
 .card span { color: #6a1b9a; font-weight: bold; }
+
+button.support, a.support {
+  background: #6a1b9a;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+button.support:hover, a.support:hover {
+  background: #3e8e41;
+  transform: scale(1.05);
+}
 
 .formulario h2 { text-align: center; color: #6a1b9a; }
 .formulario label { display: block; margin-top: 1rem; font-weight: bold; }
@@ -180,7 +231,6 @@ button.secondary {
 .empresas-dark .h3_barrio { color: #fce833; }
 .empresas-dark .h3_inverti { color: #faf4bb; }
 .empresas-dark p { color: #faf4bb; }
-
 .empresas-dark ul { margin-top: 1rem; list-style: none; padding: 0; }
 .empresas-dark li::before {
   content: "✔ ";
@@ -204,10 +254,9 @@ footer nav a { color: #fff; text-decoration: none; margin: 0 0.5rem; }
 
 .ofrecer {
   display: flex;
-  justify-content: center; /* lo centra horizontalmente */
-  margin-top: 2rem;        /* espacio respecto a las tarjetas */
+  justify-content: center; 
+  margin-top: 2rem;      
 }
-
 .ofrecer a.primary {
   background: #6a1b9a;
   color: #fff;
@@ -217,4 +266,3 @@ footer nav a { color: #fff; text-decoration: none; margin: 0 0.5rem; }
   text-decoration: none;
   display: inline-block;
 }
-

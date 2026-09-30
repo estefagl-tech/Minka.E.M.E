@@ -10,14 +10,16 @@
 <body>
   <header>
     <div class="logo">
-      <a href="../Minka.E.M.E/HTML/datos_personales.html" class="logo-circle">m</a>
+      <a href="../HTML/datos_personales.html" class="logo-circle">m</a>
       <span class="logo-text">MINKA</span>
     </div>
-    <nav>
-      <a href="../Minka.E.M.E/HTML/login.html" class="login-btn">Iniciar sesión</a>
-      <a href="../Minka.E.M.E/HTML/Registrarse.html" class="register-btn">Registrarse</a>
-    </nav>
+    <div>
+      <nav>
+        <span id="usuario" class="usuario"></span>
+      </nav>
+    </div>
   </header>
+
 
   <main>
     <span class="tag">🌿 Red comunitaria activa en Colombia</span>
@@ -28,7 +30,7 @@
 
     <div class="buttons">
       <button class="primary">EXPLORAR CAUSAS</button>
-      <button class="secondary">PUBLICAR MI CAUSA…</button>
+      <a href="../HTML/Mi_proyecto.html" class="primary">PUBLICAR MI CAUSA</a>
     </div>
 
     <section class="stats">
@@ -41,7 +43,7 @@
 
   <section class="counters">
     <div>0 Personas ayudadas</div>
-    <div>0 Proyectos activos</div>
+    <div>8 Proyectos activos</div>
     <div>0 Animales adoptados</div>
     <div>0 Pesos movilizados</div>
   </section>
@@ -65,7 +67,7 @@
         <h3>Refugio Huellas Libres — Alimento Urgente</h3>
         <p>Tenemos 60 perros y 30 gatos en espera de adopción. Nos quedamos sin alimento para...</p>
         <span>0 personas apoyando</span>
-        <button class="support">Apoyar</button>
+        <a href="../HTML/voy_apoyar.html" class="support">Apoyar</a>
       </div>
 
       <div class="card" data-category="social">
@@ -74,7 +76,7 @@
         <h3>Taller de Costura para Madres Solas</h3>
         <p>Capacitamos a madres en situación vulnerable con oficio de costura y ayudamos...</p>
         <span>0 personas apoyando</span>
-        <button class="support">Apoyar</button>
+        <a href="../HTML/voy_apoyar.html" class="support">Apoyar</a>
       </div>
 
       <div class="card" data-category="patrocinio">
@@ -84,7 +86,7 @@
         <h3>Festival Cultural Minka Fest 2024</h3>
         <p>Buscamos empresas locales que apadrinen nuestro festival gratuito de música, arte y...</p>
         <span>0 personas apoyando</span>
-        <button class="support">Apoyar</button>
+        <a href="../HTML/voy_apoyar.html" class="support">Apoyar</a>
       </div>
 
       <div class="card" data-category="emergencia">
@@ -94,9 +96,10 @@
         <h3>Familias Afectadas por Inundaciones</h3>
         <p>Las lluvias de la semana pasada dejaron 34 familias sin techo. Necesitamos kits de...</p>
         <span>0 personas apoyando</span>
-        <button class="support">Apoyar</button>
+        <a href="../HTML/voy_apoyar.html" class="support">Apoyar</a>
       </div>
     </div>
+
   </section>
 
   <section class="adopcion">
@@ -115,43 +118,40 @@
           alt="Rocco">
         <h3>Rocco</h3>
         <p>Edad: 2 años. Mestizo mediano, macho. Juguetón y cariñoso.</p>
-        <a href="../Minka.E.M.E/HTML/Adopcion.html?nombre=Rocco" class="support">
-          Quiero adoptarlo
-        </a>
+        <a href="../HTML/detalle_mascotas.html?nombre=Rocco" class="support">Ver más</a>
       </div>
+
       <div class="card" data-category="gatos">
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX6gGj58B2H-W8RHTz_Qa1y-UOMAwhQD5AgymASyIdHQ&s=10"
           alt="Luna">
         <h3>Luna</h3>
         <p>Edad: 1 año. Independiente pero protectora.</p>
-        <a href="../Minka.E.M.E/HTML/Adopcion.html?nombre=Luna" class="support">
-          Quiero adoptarla
-        </a>
+        <a href="../HTML/detalle_mascotas.html?nombre=Luna" class="support">Ver más</a>
       </div>
+
       <div class="card" data-category="perros">
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPjHMdVmpjX0w4Fqoa8EnH5HkmgqgNo9jEoJ3sY5CFSA&s=10"
           alt="Trío de cachorros">
         <h3>Trío de cachorros</h3>
         <p>Edad: 3 meses. Labradores mestizos. Hermanos rescatados de la calle.</p>
-        <a href="../Minka.E.M.E/HTML/Adopcion.html?nombre=Cachorros" class="support">
-          Quiero adoptarlos
-        </a>
+        <a href="../HTML/detalle_mascotas.html?nombre=Cachorros" class="support">Ver más</a>
       </div>
+
       <div class="card" data-category="perros">
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYd863g4DUo9yZZ0RUiN1n-aJa63BK0QbAhkVOXiRQEA&s=10"
           alt="Bandido">
         <h3>Bandido</h3>
         <p>Edad: 4 años. Salchicha mestizo, macho. Tranquilo y fiel compañero.</p>
-        <a href="../Minka.E.M.E/HTML/Adopcion.html?nombre=Bandido" class="support">
-          Quiero adoptarlo
-        </a>
+        <a href="../HTML/detalle_mascotas.html?nombre=Bandido" class="support">Ver más</a>
       </div>
     </div>
+
+
     <div class="ofrecer">
-      <a href="../Minka.E.M.E/HTML/Mascota_para_adoptar.html" class="primary">
+      <a href="../HTML/Mascota_para_adoptar.html" class="primary">
         Ofrecer mascota para adopción
       </a>
     </div>
@@ -187,7 +187,6 @@
       <h3 class="h3_barrio">Y que lo sepa el barrio.</h3>
       <p>Las empresas que patrocinan causas en Minka ganan visibilidad local real, mejoran su reputación y contribuyen
         al tejido social.</p>
-      <button class="primary">Quiero patrocinar causas ➜</button>
       <ul>
         <li>Visibilidad en tu barrio</li>
         <li>Certificado de impacto social</li>

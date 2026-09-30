@@ -1,18 +1,38 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const cambiarBtn = document.querySelector(".botones .btn:first-child");
-    const cerrarBtn = document.querySelector(".botones .btn:last-child");
-    const volverBtn = document.querySelector(".btn.volver");
+  const cambiarBtn = document.getElementById("cambiarBtn");
+  const cerrarBtn = document.getElementById("cerrarBtn");
+  const volverBtn = document.getElementById("volverBtn");
 
-    cambiarBtn.addEventListener("click", () => {
-        alert("Función para cambiar contraseña en construcción 🔒");
+  cambiarBtn.addEventListener("click", () => {
+    Swal.fire({
+      icon: "info",
+      title: "Función en construcción",
+      text: "La opción para cambiar contraseña estará disponible pronto 🔒"
     });
+  });
 
-    cerrarBtn.addEventListener("click", () => {
-        alert("Sesión cerrada correctamente 🚪");
+  cerrarBtn.addEventListener("click", () => {
+    Swal.fire({
+      icon: "success",
+      title: "Sesión cerrada",
+      text: "Has cerrado sesión correctamente 🚪"
+    }).then(() => {
+      window.location.href = "../HTML/login.html";
     });
+  });
 
-    volverBtn.addEventListener("click", () => {
-        alert("Volviendo a la página anterior ↩️");
-        window.history.back();
+  volverBtn.addEventListener("click", () => {
+    Swal.fire({
+      icon: "question",
+      title: "¿Volver?",
+      text: "Regresarás al inicio 🏠",
+      showCancelButton: true,
+      confirmButtonText: "Sí, volver",
+      cancelButtonText: "Cancelar"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.location.href = volverBtn.dataset.link; // usa el link del atributo
+      }
     });
+  });
 });

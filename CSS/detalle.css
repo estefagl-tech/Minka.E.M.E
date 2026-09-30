@@ -1,0 +1,113 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  background: #fafafa;
+  color: #333;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.logo-circle {
+  width: 32px;
+  height: 32px;
+  background: #c6a5f5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #000;
+  font-family: cursive;
+  text-decoration: none;
+}
+
+.logo-text {
+  font-family: cursive;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #000;
+  margin-left: 8px;
+}
+
+.detalle-mascota {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.detalle-mascota img {
+  display: block;
+  margin: 0 auto 1.5rem auto;
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.detalle-mascota h2 {
+  color: #6a1b9a;
+  margin-bottom: 0.5rem;
+}
+
+.detalle-mascota p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+}
+
+.acciones {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+a.support {
+  background: #4CAF50;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+a.support:hover {
+  background: #3e8e41;
+  transform: scale(1.05);
+}
+
+a.secondary {
+  background: #fff;
+  color: #6a1b9a;
+  border: 2px solid #6a1b9a;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+a.secondary:hover {
+  background: #6a1b9a;
+  color: #fff;
+}
+
+footer {
+  background: #222;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
