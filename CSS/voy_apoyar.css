@@ -9,41 +9,15 @@ body {
 }
 
 .container {
-  width: 80%;
+  width: 85%;
+  max-width: 700px;
   background: #ffffff;
-  padding: 2rem;
-  border-radius: 10px;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
-}
-
-.logo {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
-}
-
-.logo-circulo {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background-color: #8389F2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  font-style: italic;
-  font-weight: bold;
-  color: black;
-}
-
-.logo span {
-  font-family: cursive;
-  font-weight: bold;
-  font-style: italic;
+  position: relative;
+  box-sizing: border-box;
+  border: 2px solid #c2a8ff;
 }
 
 h1.title {
@@ -59,36 +33,38 @@ h3.title.is-5 {
   padding-bottom: 0.3rem;
 }
 
+input:not([type="checkbox"]),
 .input,
+select,
 .select select {
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  width: 100%;
   padding: 0.6rem;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
+select,
+.select select {
+  background-color: #f7f3ff;
+  color: #333333;
+  cursor: pointer;
+}
+
+select option {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+input:focus:not([type="checkbox"]),
 .input:focus,
+select:focus,
 .select select:focus {
-  border-color: #874FFF;
-  box-shadow: 0 0 5px rgba(135, 79, 255, 0.5);
-}
-
-input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-.button.is-success {
-  background-color: #874FFF;
-  color: #fff;
-  font-weight: bold;
-  padding: 0.8rem 2rem;
-  border-radius: 6px;
-  transition: background 0.3s;
-}
-
-.button.is-success:hover {
-  background-color: #6a3bcc;
+  border-color: #a875ff;
+  box-shadow: 0 0 8px rgba(168, 117, 255, 0.5);
 }
 
 .form-row {
@@ -105,8 +81,10 @@ input {
 }
 
 .field label {
-  font-weight: bold;
-  margin-bottom: 5px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #999999;
 }
 
 .form-row.full-width {
@@ -130,13 +108,34 @@ input {
 }
 
 .requisitos label {
-  display: block;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
   margin-bottom: 8px;
   color: #333;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.requisitos input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-top: 3px;
+  accent-color: #874FFF;
+  cursor: pointer;
+  flex-shrink: 0;
 }
 
 .form-row.full-width label {
   text-align: center;
+}
+
+.form-row .field label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 20px;
+  display: block;
 }
 
 .separador {
@@ -145,16 +144,45 @@ input {
   margin: 1.5rem 0;
 }
 
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 1.5rem;
+}
+
+.button.is-success,
 .button-volver {
-  background-color: #8389F2;
-  color: white;
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color: #874FFF; 
+  color: #fff;
   font-weight: bold;
+  font-size: 0.95rem;
   padding: 0.8rem 2rem;
   border-radius: 6px;
+  border: none;             
+  text-decoration: none;   
+  cursor: pointer;
+  box-sizing: border-box;
   transition: background 0.3s;
-  margin-top: 1rem;
+}
+
+.button.is-success:hover {
+  background-color: #6a3bcc;
+}
+
+.button-volver {
+  background-color: #8389F2;
 }
 
 .button-volver:hover {
   background-color: #6a72d8;
+}
+
+.obligatorio {
+  color: #e53935;
+  font-weight: bold;
+  margin-left: 4px;
 }

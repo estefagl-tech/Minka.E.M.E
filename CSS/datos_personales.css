@@ -103,22 +103,23 @@ input:focus {
 }
 
 .logo {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  margin-top: 20px;
+  text-align: center;
+  color: #5a3ea1;
+  font-weight: bold;
 }
 
 .logo-circulo {
+  display: inline-block;
   width: 25px;
   height: 25px;
   border-radius: 50%;
   background-color: #8389F2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
   color: #fff;
+  font-weight: bold;
+  line-height: 25px;
+  text-align: center;
+  margin-right: 5px;
 }
+
+

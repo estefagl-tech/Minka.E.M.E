@@ -1,48 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <title>Registro</title>
   <link rel="stylesheet" href="../CSS/registrarse.css">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
+
 <body>
   <section class="fondo">
     <div class="formulario">
       <h1 class="titulo">Registrarse</h1>
       <p class="subtitulo">Completa tus datos personales</p>
 
-      <label for="nombre">Nombre</label>
-      <input type="text" id="nombre" placeholder="Nombre">
+      <label for="nombre">Nombre <span class="obligatorio">*</span></label>
+      <input type="text" id="nombre" placeholder="Nombre" required>
 
-      <label for="apellidos">Apellidos</label>
-      <input type="text" id="apellidos" placeholder="Apellidos">
+      <label for="apellidos">Apellidos <span class="obligatorio">*</span></label>
+      <input type="text" id="apellidos" placeholder="Apellidos" required>
 
-      <label for="tipoDocumento">Tipo de documento</label>
-      <select id="tipoDocumento">
+      <label for="tipoDocumento">Tipo de documento <span class="obligatorio">*</span></label>
+      <select id="tipoDocumento" required>
+        <option value="">Seleccione...</option>
         <option>Cédula de ciudadanía</option>
         <option>Tarjeta de identidad</option>
         <option>Cédula de extranjería</option>
         <option>Pasaporte</option>
       </select>
 
-      <label for="numeroDocumento">Número de documento</label>
-      <input type="number" id="numeroDocumento" placeholder="Número de documento">
+      <label for="numeroDocumento">Número de documento <span class="obligatorio">*</span></label>
+      <input type="number" id="numeroDocumento" placeholder="Número de documento" required>
 
-      <label for="departamento">Departamento</label>
-      <input type="text" id="departamento" placeholder="Departamento">
+      <label for="departamento">Departamento </label>
+      <input type="text" id="departamento" placeholder="Departamento" required>
 
       <label for="municipio">Municipio</label>
-      <input type="text" id="municipio" placeholder="Municipio">
+      <input type="text" id="municipio" placeholder="Municipio" required>
 
-      <label for="telefono">Teléfono</label>
-      <input type="tel" id="telefono" placeholder="Teléfono">
+      <label for="telefono">Teléfono <span class="obligatorio">*</span></label>
+      <input type="tel" id="telefono" placeholder="Teléfono" required>
 
-      <label for="correo">Correo electrónico</label>
-      <input type="email" id="correo" placeholder="tunombre@gmail.com">
+      <label for="correo">Correo electrónico <span class="obligatorio">*</span></label>
+      <input type="email" id="correo" placeholder="tunombre@gmail.com" required>
 
-      <label for="contraseña">Contraseña</label>
-      <input type="password" id="contraseña" placeholder="Contraseña">
+      <label for="contraseña">Contraseña <span class="obligatorio">*</span></label>
+      <input type="password" id="contraseña" placeholder="Contraseña" required>
+
 
       <button class="btn-primario" id="continuarBtn">Continuar</button>
       <button class="btn-secundario" onclick="window.location.href='../HTML/login.html'">Iniciar sesion</button>
@@ -55,4 +59,5 @@
   </section>
   <script src="../JS/registrarse.js"></script>
 </body>
+
 </html>

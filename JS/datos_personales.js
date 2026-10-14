@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const cerrarBtn = document.getElementById("cerrarBtn");
   const volverBtn = document.getElementById("volverBtn");
 
-  // 🔹 Recuperar datos guardados en localStorage
   const nombre = localStorage.getItem("usuarioNombre");
   const correo = localStorage.getItem("usuarioCorreo");
 
@@ -42,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
       cancelButtonText: "Cancelar"
     }).then((result) => {
       if (result.isConfirmed) {
-        window.location.href = volverBtn.dataset.link; // usa el link del atributo
+        window.location.href = volverBtn.dataset.link; 
       }
     });
   });

@@ -102,3 +102,10 @@ input:focus, select:focus {
   text-align: center;
   margin-right: 5px;
 }
+
+.obligatorio {
+  color: #e53935;  
+  font-weight: bold;
+  margin-left: 4px;
+}
+

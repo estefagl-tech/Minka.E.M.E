@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Ofrecer Mascota</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma/css/bulma.min.css">
   <link rel="stylesheet" href="../CSS/Mascota_para_adoptar.css">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
@@ -13,33 +12,45 @@
   <section class="section">
     <div class="container box">
       <h1 class="title has-text-centered">VOY A OFRECER UNA MASCOTA</h1>
-
-      <div class="logo">
-        <div class="logo-circulo"><em>M</em></div>
-        <span>MINKA</span>
-      </div>
-
       <form id="mascotaForm">
         <h3 class="title is-5">Datos de la mascota</h3>
         <div class="form-row">
+
           <div class="field">
-            <label for="nombreMascota">Nombre de la mascota</label>
-            <input type="text" id="nombreMascota" placeholder="Ej. Luna, Rocco...">
+            <label class="label" for="nombreMascota">
+              Nombre de la mascota <span class="obligatorio">*</span></label>
+            <input type="text" id="nombreMascota" placeholder="Ej. Luna, Rocco..." required>
           </div>
+
           <div class="field">
-            <label for="edadMascota">Edad</label>
-            <input type="text" id="edadMascota" placeholder="Ej. 2 años">
+            <label for="edadMascota">
+              Edad <span class="obligatorio">*</span></label>
+            <input type="text" id="edadMascota" placeholder="Ej. 2 años" required>
           </div>
         </div>
 
         <div class="form-row">
           <div class="field">
-            <label for="especie">Especie</label>
-            <input type="text" id="especie" placeholder="Ej. Gato, Perro">
+            <label class="label" for="nombreMascota">Nombre de la mascota <span class="obligatorio">*</span></label>
+            <input type="text" id="nombreMascota" placeholder="Ej. Luna, Rocco..." required>
           </div>
+
           <div class="field">
-            <label for="sexo">Sexo</label>
-            <select id="sexo" class="input">
+            <label class="label" for="edadMascota">Edad <span class="obligatorio">*</span></label>
+            <input type="text" id="edadMascota" placeholder="Ej. 2 años" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label class="label" for="especie">Especie <span class="obligatorio">*</span></label>
+            <input type="text" id="especie" placeholder="Ej. Gato, Perro" required>
+          </div>
+
+          <div class="field">
+            <label class="label" for="sexo">Sexo <span class="obligatorio">*</span></label>
+            <select id="sexo" class="input" required>
+              <option value="">Seleccione...</option>
               <option>Hembra</option>
               <option>Macho</option>
             </select>
@@ -48,21 +59,19 @@
 
         <div class="form-row full-width">
           <div class="field">
-            <label for="descripcion">Descripción</label>
+            <label class="label" for="descripcion">Descripción</label>
             <textarea id="descripcion" rows="3" placeholder="Ej. Juguetón, cariñoso, independiente..."></textarea>
           </div>
         </div>
 
-        <h3 class="title is-5">Foto de la mascota</h3>
         <div class="upload-box">
-          <span>Sube una foto de la mascota</span>
-          <input type="file" id="fotoMascota" accept="image/*" class="upload-btn">
+          <span>Sube una foto de la mascota <span class="obligatorio">*</span></span>
+          <input type="file" id="fotoMascota" accept="image/*" class="upload-btn" required>
         </div>
 
-        <h3 class="title is-5">Información adicional</h3>
         <div class="form-row full-width">
           <div class="field">
-            <label for="informacion">Detalles adicionales</label>
+            <label class="label" for="informacion">Detalles adicionales</label>
             <textarea id="informacion" rows="3"
               placeholder="Ej. Vacunas al día, esterilizado, comportamiento especial..."></textarea>
           </div>
@@ -76,10 +85,11 @@
           </label>
         </div>
 
-        <div class="field has-text-centered">
-          <button class="button is-success is-medium" id="enviarBtn">Enviar</button>
-          <a href="../home/home.html" class="button-volver" id="volverBtn">Volver</a>
+        <div class="button-container">
+          <button type="submit" class="button is-success" id="enviarBtn">Enviar datos</button>
+          <a href="../home/home.html" class="button-volver" id="homeBtn">Volver</a>
         </div>
+
       </form>
     </div>
   </section>
