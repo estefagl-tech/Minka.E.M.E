@@ -11,6 +11,7 @@
 <body>
   <section class="section">
     <div class="container box">
+      
       <h1 class="title has-text-centered">VOY A OFRECER UNA MASCOTA</h1>
       <form action="" method="post" id="mascotaForm">
         <h3 class="title is-5">Datos de la mascota</h3>
@@ -19,37 +20,37 @@
           <div class="field">
             <label class="label" for="nombreMascota">
               Nombre de la mascota <span class="obligatorio">*</span></label>
-            <input type="text" id="nombreMascota" placeholder="Ej. Luna, Rocco..." required>
+            <input type="text" id="nombreMascota" name="nombreMascota" placeholder="Ej. Luna, Rocco..." required>
           </div>
 
           <div class="field">
             <label for="edadMascota">
               Edad <span class="obligatorio">*</span></label>
-            <input type="text" id="edadMascota" placeholder="Ej. 2 años" required>
+            <input type="text" id="edadMascota" name="edadMascota" placeholder="Ej. 2 años" required>
           </div>
         </div>
 
         <div class="form-row">
           <div class="field">
             <label class="label" for="nombreMascota">Nombre de la mascota <span class="obligatorio">*</span></label>
-            <input type="text" id="nombreMascota" placeholder="Ej. Luna, Rocco..." required>
+            <input type="text" id="nombreMascota" name="nombreMascota" placeholder="Ej. Luna, Rocco..." required>
           </div>
 
           <div class="field">
             <label class="label" for="edadMascota">Edad <span class="obligatorio">*</span></label>
-            <input type="text" id="edadMascota" placeholder="Ej. 2 años" required>
+            <input type="text" id="edadMascota"  name="edadMascota" placeholder="Ej. 2 años" required>
           </div>
         </div>
 
         <div class="form-row">
           <div class="field">
             <label class="label" for="especie">Especie <span class="obligatorio">*</span></label>
-            <input type="text" id="especie" placeholder="Ej. Gato, Perro" required>
+            <input type="text" id="especie" name="especie" placeholder="Ej. Gato, Perro" required>
           </div>
 
           <div class="field">
             <label class="label" for="sexo">Sexo <span class="obligatorio">*</span></label>
-            <select id="sexo" class="input" required>
+            <select id="sexo" name="sexo" class="input" required>
               <option value="">Seleccione...</option>
               <option>Hembra</option>
               <option>Macho</option>
@@ -60,19 +61,19 @@
         <div class="form-row full-width">
           <div class="field">
             <label class="label" for="descripcion">Descripción</label>
-            <textarea id="descripcion" rows="3" placeholder="Ej. Juguetón, cariñoso, independiente..."></textarea>
+            <textarea id="descripcion" name="descripcion" rows="3" placeholder="Ej. Juguetón, cariñoso, independiente..."></textarea>
           </div>
         </div>
 
         <div class="upload-box">
           <span>Sube una foto de la mascota <span class="obligatorio">*</span></span>
-          <input type="file" id="fotoMascota" accept="image/*" class="upload-btn" required>
+          <input type="file" id="fotoMascota" name="fotoMascota" accept="image/*" class="upload-btn" required>
         </div>
 
         <div class="form-row full-width">
           <div class="field">
             <label class="label" for="informacion">Detalles adicionales</label>
-            <textarea id="informacion" rows="3"
+            <textarea id="informacion" name="informacion" rows="3"
               placeholder="Ej. Vacunas al día, esterilizado, comportamiento especial..."></textarea>
           </div>
         </div>
@@ -81,7 +82,7 @@
 
         <div class="form-row full-width">
           <label>
-            <input type="checkbox" id="acepto"> Acepto que la información será utilizada solo para coordinar la adopción
+            <input type="checkbox" id="acepto" name="acepto"> Acepto que la información será utilizada solo para coordinar la adopción
           </label>
         </div>
 

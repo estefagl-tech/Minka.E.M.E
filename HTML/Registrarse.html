@@ -15,10 +15,10 @@
       <p class="subtitulo">Completa tus datos personales</p>
 
       <label for="nombre">Nombre <span class="obligatorio">*</span></label>
-      <input type="text" id="nombre" placeholder="Nombre" required>
+      <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
 
       <label for="apellidos">Apellidos <span class="obligatorio">*</span></label>
-      <input type="text" id="apellidos" placeholder="Apellidos" required>
+      <input type="text" id="apellidos" name=""apellidos placeholder="Apellidos" required>
 
       <label for="tipoDocumento">Tipo de documento <span class="obligatorio">*</span></label>
       <select id="tipoDocumento" required>
@@ -42,14 +42,14 @@
       <input type="tel" id="telefono" placeholder="Teléfono" required>
 
       <label for="correo">Correo electrónico <span class="obligatorio">*</span></label>
-      <input type="email" id="correo" placeholder="tunombre@gmail.com" required>
+      <input type="email" id="correo" name="correo" placeholder="tunombre@gmail.com" required>
 
       <label for="contraseña">Contraseña <span class="obligatorio">*</span></label>
-      <input type="password" id="contraseña" placeholder="Contraseña" required>
+      <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña" required>
 
 
-      <button class="btn-primario" id="continuarBtn">Continuar</button>
-      <button class="btn-secundario" onclick="window.location.href='../HTML/login.html'">Iniciar sesion</button>
+      <button  type="submit" class="btn-primario" id="continuarBtn">Continuar</button>
+      <button type="submit" class="btn-secundario" onclick="window.location.href='../HTML/login.html'">Iniciar sesion</button>
 
       <div class="logo">
         <div class="logo-circulo">M</div>
