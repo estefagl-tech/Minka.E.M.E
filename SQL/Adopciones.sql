@@ -6,7 +6,7 @@ CREATE TABLE adopciones (
     documento VARCHAR(50) NOT NULL,
     telefono VARCHAR(20) NOT NULL,
     correo VARCHAR(150) NOT NULL,
-    direccion VARCHAR(200) NOT NULL,
+    direccion VARCHAR(200) DEFAULT NULL, -- Ajustado a NULL por si no es obligatoria en el HTML
 
     estado ENUM(
         'Pendiente',
@@ -18,9 +18,13 @@ CREATE TABLE adopciones (
 
     CONSTRAINT fk_adopciones_usuario
         FOREIGN KEY (usuario_id)
-        REFERENCES usuarios(id),
+        REFERENCES usuarios(id)
+        ON DELETE CASCADE 
+        ON UPDATE CASCADE,
 
     CONSTRAINT fk_adopciones_mascota
         FOREIGN KEY (mascota_id)
         REFERENCES mascotas(id)
-);
+        ON DELETE CASCADE 
+        ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
