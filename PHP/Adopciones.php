@@ -8,3 +8,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $correo = $_POST['correo'];
     $acepto = $_POST['acepto'];
 }
+
+$sql = "INSERT INTO Adopciones (nombre , documento , telefono , correo , acepto)
+        VALUES ('$nombre' , '$documento' , '$telefono' , '$correo' , '$acepto')";
