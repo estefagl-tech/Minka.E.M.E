@@ -1,64 +1,125 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Registro</title>
+    <link rel="stylesheet" href="../CSS/registrarse.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Registro</title>
-  <link rel="stylesheet" href="../CSS/registrarse.css">
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-</head>
+  <body>
+    <section class="fondo">
+      <div class="formulario">
+        <form action="" method="post" id="RegistrarseForm"></form>
+        <h1 class="titulo">Registrarse</h1>
+        <p class="subtitulo">Completa tus datos personales</p>
 
-<body>
-  <section class="fondo">
-    <div class="formulario">
-      <form action="" method="post" id="RegistrarseForm"></form>
-      <h1 class="titulo">Registrarse</h1>
-      <p class="subtitulo">Completa tus datos personales</p>
+        <label for="nombre">Nombre <span class="obligatorio">*</span></label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          placeholder="Nombre"
+          required
+        />
 
-      <label for="nombre">Nombre <span class="obligatorio">*</span></label>
-      <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+        <label for="apellidos"
+          >Apellidos <span class="obligatorio">*</span></label
+        >
+        <input
+          type="text"
+          id="apellidos"
+          name="apellidos"
+          placeholder="Apellidos"
+          required
+        />
 
-      <label for="apellidos">Apellidos <span class="obligatorio">*</span></label>
-      <input type="text" id="apellidos" name=""apellidos placeholder="Apellidos" required>
+        <label for="tipoDocumento"
+          >Tipo de documento <span class="obligatorio">*</span></label
+        >
+        <select id="tipoDocumento" name="tipo_documento" required>
+          <option value="">Seleccione...</option>
+          <option value="CC">Cédula de ciudadanía</option>
+          <option value="TI">Tarjeta de identidad</option>
+          <option value="CE">Cédula de extranjería</option>
+          <option value="PP">Pasaporte</option>
+        </select>
 
-      <label for="tipoDocumento">Tipo de documento <span class="obligatorio">*</span></label>
-      <select id="tipoDocumento" required>
-        <option value="">Seleccione...</option>
-        <option>Cédula de ciudadanía</option>
-        <option>Tarjeta de identidad</option>
-        <option>Cédula de extranjería</option>
-        <option>Pasaporte</option>
-      </select>
+        <label for="numeroDocumento"
+          >Número de documento <span class="obligatorio">*</span></label
+        >
+        <input
+          type="number"
+          id="numeroDocumento"
+          name="numero_documento"
+          placeholder="Número de documento"
+          required
+        />
+        <label for="departamento">Departamento </label>
+        <input
+          type="text"
+          id="departamento"
+          name="departamento"
+          placeholder="Departamento"
+          required
+        />
+        <label for="municipio">Municipio</label>
+        <input
+          type="text"
+          id="municipio"
+          name="municipio"
+          placeholder="Municipio"
+          required
+        />
+        <label for="telefono"
+          >Teléfono <span class="obligatorio">*</span></label
+        >
+        <input
+          type="tel"
+          id="telefono"
+          name="telefono"
+          placeholder="Teléfono"
+          required
+        />
+        <label for="correo"
+          >Correo electrónico <span class="obligatorio">*</span></label
+        >
+        <input
+          type="email"
+          id="correo"
+          name="correo"
+          placeholder="tunombre@gmail.com"
+          required
+        />
 
-      <label for="numeroDocumento">Número de documento <span class="obligatorio">*</span></label>
-      <input type="number" id="numeroDocumento" placeholder="Número de documento" required>
+        <label for="contraseña"
+          >Contraseña <span class="obligatorio">*</span></label
+        >
+        <input
+          type="password"
+          id="contraseña"
+          name="contraseña"
+          placeholder="Contraseña"
+          required
+        />
 
-      <label for="departamento">Departamento </label>
-      <input type="text" id="departamento" placeholder="Departamento" required>
+        <button type="submit" class="btn-primario" id="continuarBtn">
+          Continuar
+        </button>
+        <button
+          type="submit"
+          class="btn-secundario"
+          onclick="window.location.href = '../HTML/login.html'"
+        >
+          Iniciar sesion
+        </button>
 
-      <label for="municipio">Municipio</label>
-      <input type="text" id="municipio" placeholder="Municipio" required>
-
-      <label for="telefono">Teléfono <span class="obligatorio">*</span></label>
-      <input type="tel" id="telefono" placeholder="Teléfono" required>
-
-      <label for="correo">Correo electrónico <span class="obligatorio">*</span></label>
-      <input type="email" id="correo" name="correo" placeholder="tunombre@gmail.com" required>
-
-      <label for="contraseña">Contraseña <span class="obligatorio">*</span></label>
-      <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña" required>
-
-
-      <button  type="submit" class="btn-primario" id="continuarBtn">Continuar</button>
-      <button type="submit" class="btn-secundario" onclick="window.location.href='../HTML/login.html'">Iniciar sesion</button>
-
-      <div class="logo">
-        <div class="logo-circulo">M</div>
-        <span>MINKA</span>
+        <div class="logo">
+          <div class="logo-circulo">M</div>
+          <span>MINKA</span>
+        </div>
       </div>
-    </div>
-  </section>
-  <script src="../JS/registrarse.js"></script>
-</body>
-
+    </section>
+    <script src="../JS/registrarse.js"></script>
+  </body>
 </html>

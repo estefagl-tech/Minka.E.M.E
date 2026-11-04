@@ -3,14 +3,12 @@ CREATE TABLE apoyos (
     usuario_id INT NOT NULL,
     causa_id INT NOT NULL,
     
-    -- Datos del colaborador (agregados para que coincidan con el formulario)
     nombre_colaborador VARCHAR(150) NOT NULL,
     documento VARCHAR(50) NOT NULL,
     telefono VARCHAR(20) NOT NULL,
     correo VARCHAR(150) NOT NULL,
     direccion VARCHAR(200) DEFAULT NULL,
 
-    -- Detalles del apoyo
     tipo_apoyo VARCHAR(100) NOT NULL,
     monto DECIMAL(10,2) DEFAULT NULL,
     fecha_estimada DATE DEFAULT NULL,

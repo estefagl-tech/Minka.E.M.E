@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+
     const enviarBtn = document.querySelector(".button.is-success");
 
     enviarBtn.addEventListener("click", (e) => {
@@ -7,34 +8,35 @@ document.addEventListener("DOMContentLoaded", () => {
         const nombreMascota = document.getElementById("nombreMascota").value.trim();
         const edadMascota = document.getElementById("edadMascota").value.trim();
         const especie = document.getElementById("especie").value.trim();
+        const sexo = document.getElementById("sexo").value;
         const descripcion = document.getElementById("descripcion").value.trim();
-        const fotoMascota = document.getElementById("fotoMascota").files.length;
         const informacion = document.getElementById("informacion").value.trim();
+        const fotoMascota = document.getElementById("fotoMascota");
         const acepto = document.getElementById("acepto").checked;
 
         if (!nombreMascota || !edadMascota || !especie || !descripcion) {
             Swal.fire({
                 icon: "error",
                 title: "Campos obligatorios",
-                text: "Por favor completa nombre, edad, especie y descripción de la mascota."
+                text: "Completa todos los campos requeridos."
             });
             return;
         }
 
-        if (!fotoMascota) {
+        if (fotoMascota.files.length === 0) {
             Swal.fire({
                 icon: "warning",
                 title: "Foto requerida",
-                text: "Debes subir al menos una foto de la mascota."
+                text: "Debes subir una foto."
             });
             return;
         }
 
         if (!informacion) {
             Swal.fire({
-                icon: "info",
+                icon: "warning",
                 title: "Información adicional",
-                text: "Por favor agrega detalles adicionales de la mascota (vacunas, esterilización, etc.)."
+                text: "Agrega información de la mascota."
             });
             return;
         }
@@ -43,34 +45,87 @@ document.addEventListener("DOMContentLoaded", () => {
             Swal.fire({
                 icon: "warning",
                 title: "Confirmación requerida",
-                text: "Debes aceptar el uso de la información para coordinar la adopción."
+                text: "Debes aceptar el uso de la información."
             });
             return;
         }
 
-        Swal.fire({
-            icon: "success",
-            title: "¡Mascota registrada!",
-            text: `La información de ${nombreMascota} fue enviada correctamente 🐾`
-        }).then(() => {
-            window.location.href = "../home/home.html";
+        const formData = new FormData();
+
+        formData.append("nombreMascota", nombreMascota);
+        formData.append("edadMascota", edadMascota);
+        formData.append("especie", especie);
+        formData.append("sexo", sexo);
+        formData.append("descripcion", descripcion);
+        formData.append("informacion", informacion);
+        formData.append("fotoMascota", fotoMascota.files[0]);
+
+        fetch("../PHP/mascotas.php", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+
+            if (data.includes("OK")) {
+
+                Swal.fire({
+                    icon: "success",
+                    title: "¡Mascota registrada!",
+                    text: "La mascota fue guardada correctamente."
+                }).then(() => {
+
+                    document.querySelector("form").reset();
+
+                    window.location.href = "../home/home.html";
+                });
+
+            } else {
+
+                Swal.fire({
+                    icon: "error",
+                    title: "Error",
+                    text: data
+                });
+
+            }
+
+        })
+        .catch(error => {
+
+            Swal.fire({
+                icon: "error",
+                title: "Error de conexión",
+                text: error
+            });
+
         });
+
     });
+
 });
 
-const volverBtn = document.getElementById("volverBtn");
+const volverBtn = document.getElementById("homeBtn");
 
-volverBtn.addEventListener("click", () => {
-  Swal.fire({
-    icon: "question",
-    title: "¿Volver al Home?",
-    text: "Regresarás a la página principal 🏠",
-    showCancelButton: true,
-    confirmButtonText: "Sí, volver",
-    cancelButtonText: "Cancelar"
-  }).then((result) => {
-    if (result.isConfirmed) {
-      window.location.href = "../home/home.html";
-    }
-  });
-});
+if (volverBtn) {
+
+    volverBtn.addEventListener("click", () => {
+
+        Swal.fire({
+            icon: "question",
+            title: "¿Volver al Home?",
+            text: "Regresarás a la página principal",
+            showCancelButton: true,
+            confirmButtonText: "Sí, volver",
+            cancelButtonText: "Cancelar"
+        }).then((result) => {
+
+            if (result.isConfirmed) {
+                window.location.href = "../home/home.html";
+            }
+
+        });
+
+    });
+
+}

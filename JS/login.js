@@ -11,18 +11,37 @@ document.addEventListener("DOMContentLoaded", () => {
       Swal.fire({
         icon: "error",
         title: "Campos vacíos",
-        text: "Debes ingresar usuario y contraseña."
+        text: "Debes ingresar usuario y contraseña.",
       });
       return;
     }
 
-    Swal.fire({
-      icon: "success",
-      title: "Bienvenido",
-      text: `Hola ${usuario} 🎉`
-    }).then(() => {
-      localStorage.setItem("usuarioNombre", usuario);
-      window.location.href = "../home/home.html";
-    });
+    const formData = new FormData();
+    formData.append("login", "1");
+    formData.append("user", usuario);
+    formData.append("password", password);
+
+    fetch("../PHP/usuario.php", {
+      method: "POST",
+      body: formData,
+    })
+      .then((response) => response.text())
+      .then((data) => {
+        if (data.trim() === "OK") {
+          Swal.fire({
+            icon: "success",
+            title: "Bienvenido",
+            text: `Hola ${usuario} 🎉`,
+          }).then(() => {
+            window.location.href = "../home/home.html";
+          });
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "Acceso denegado",
+            text: data,
+          });
+        }
+      });
   });
 });
