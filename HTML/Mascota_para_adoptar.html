@@ -1,86 +1,140 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ofrecer Mascota</title>
+    <link rel="stylesheet" href="../CSS/Mascota_para_adoptar.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Ofrecer Mascota</title>
-  <link rel="stylesheet" href="../CSS/Mascota_para_adoptar.css">
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-</head>
+  <body>
+    <section class="section">
+      <div class="container box">
+        <h1 class="title has-text-centered">VOY A OFRECER UNA MASCOTA</h1>
+        <form
+          action=""
+          method="post"
+          id="mascotaForm"
+          enctype="multipart/form-data"
+        >
+          <h3 class="title is-5">Datos de la mascota</h3>
 
-<body>
-  <section class="section">
-    <div class="container box">
-      
-      <h1 class="title has-text-centered">VOY A OFRECER UNA MASCOTA</h1>
-      <form action="" method="post" id="mascotaForm" enctype="multipart/form-data">
-        <h3 class="title is-5">Datos de la mascota</h3>
+          <div class="form-row">
+            <div class="field">
+              <label class="label" for="nombreMascota"
+                >Nombre de la mascota <span class="obligatorio">*</span></label
+              >
+              <input
+                type="text"
+                id="nombreMascota"
+                name="nombreMascota"
+                placeholder="Ej. Luna, Rocco..."
+                required
+              />
+            </div>
 
-        <div class="form-row">
-          <div class="field">
-            <label class="label" for="nombreMascota">Nombre de la mascota <span class="obligatorio">*</span></label>
-            <input type="text" id="nombreMascota" name="nombreMascota" placeholder="Ej. Luna, Rocco..." required>
+            <div class="field">
+              <label class="label" for="edadMascota"
+                >Edad <span class="obligatorio">*</span></label
+              >
+              <input
+                type="text"
+                id="edadMascota"
+                name="edadMascota"
+                placeholder="Ej. 2 años"
+                required
+              />
+            </div>
           </div>
 
-          <div class="field">
-            <label class="label" for="edadMascota">Edad <span class="obligatorio">*</span></label>
-            <input type="text" id="edadMascota"  name="edadMascota" placeholder="Ej. 2 años" required>
+          <div class="form-row">
+            <div class="field">
+              <label class="label" for="especie"
+                >Especie <span class="obligatorio">*</span></label
+              >
+              <input
+                type="text"
+                id="especie"
+                name="especie"
+                placeholder="Ej. Gato, Perro"
+                required
+              />
+            </div>
+
+            <div class="field">
+              <label class="label" for="sexo"
+                >Sexo <span class="obligatorio">*</span></label
+              >
+              <select id="sexo" name="sexo" class="input" required>
+                <option value="">Seleccione...</option>
+                <option>Hembra</option>
+                <option>Macho</option>
+              </select>
+            </div>
           </div>
-        </div>
 
-        <div class="form-row">
-          <div class="field">
-            <label class="label" for="especie">Especie <span class="obligatorio">*</span></label>
-            <input type="text" id="especie" name="especie" placeholder="Ej. Gato, Perro" required>
+          <div class="form-row full-width">
+            <div class="field">
+              <label class="label" for="descripcion">Descripción</label>
+              <textarea
+                id="descripcion"
+                name="descripcion"
+                rows="3"
+                placeholder="Ej. Juguetón, cariñoso, independiente..."
+              ></textarea>
+            </div>
           </div>
 
-          <div class="field">
-            <label class="label" for="sexo">Sexo <span class="obligatorio">*</span></label>
-            <select id="sexo" name="sexo" class="input" required>
-              <option value="">Seleccione...</option>
-              <option>Hembra</option>
-              <option>Macho</option>
-            </select>
+          <div class="upload-box">
+            <span
+              >Sube una foto de la mascota
+              <span class="obligatorio">*</span></span
+            >
+            <input
+              type="file"
+              id="fotoMascota"
+              name="fotoMascota"
+              accept="image/*"
+              class="upload-btn"
+              required
+            />
           </div>
-        </div>
 
-        <div class="form-row full-width">
-          <div class="field">
-            <label class="label" for="descripcion">Descripción</label>
-            <textarea id="descripcion" name="descripcion" rows="3" placeholder="Ej. Juguetón, cariñoso, independiente..."></textarea>
+          <div class="form-row full-width">
+            <div class="field">
+              <label class="label" for="informacion"
+                >Detalles adicionales</label
+              >
+              <textarea
+                id="informacion"
+                name="informacion"
+                rows="3"
+                placeholder="Ej. Vacunas al día, esterilizado, comportamiento especial..."
+              ></textarea>
+            </div>
           </div>
-        </div>
 
-        <div class="upload-box">
-          <span>Sube una foto de la mascota <span class="obligatorio">*</span></span>
-          <input type="file" id="fotoMascota" name="fotoMascota" accept="image/*" class="upload-btn" required>
-        </div>
+          <hr class="separador" />
 
-        <div class="form-row full-width">
-          <div class="field">
-            <label class="label" for="informacion">Detalles adicionales</label>
-            <textarea id="informacion" name="informacion" rows="3"
-              placeholder="Ej. Vacunas al día, esterilizado, comportamiento especial..."></textarea>
+          <div class="form-row full-width">
+            <label>
+              <input type="checkbox" id="acepto" name="acepto" required />
+              Acepto que la información será utilizada solo para coordinar la
+              adopción
+            </label>
           </div>
-        </div>
 
-        <hr class="separador">
-
-        <div class="form-row full-width">
-          <label>
-            <input type="checkbox" id="acepto" name="acepto" required> Acepto que la información será utilizada solo para coordinar la adopción
-          </label>
-        </div>
-
-        <div class="button-container">
-          <button type="submit" class="button is-success" id="enviarBtn">Enviar datos</button>
-          <a href="../home/home.html" class="button-volver" id="homeBtn">Volver</a>
-        </div>
-
-      </form>
-    </div>
-  </section>
-  <script src="../JS/mascota_para_adoptar.js"></script>
-</body>
-
+          <div class="button-container">
+            <button type="submit" class="button is-success" id="enviarBtn">
+              Enviar datos
+            </button>
+            <a href="../home/home.php" class="button-volver" id="homeBtn"
+              >Volver</a
+            >
+          </div>
+        </form>
+      </div>
+    </section>
+    <script src="../JS/mascota_para_adoptar.js"></script>
+  </body>
 </html>

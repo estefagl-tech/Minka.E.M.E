@@ -13,7 +13,7 @@
   <section class="section">
     <div class="container box">
       <h1 class="title has-text-centered">CUAL ES TU PROYECTO?</h1>
-      <form action="" method="post" id="proyectoForm">
+      <form action="" method="post" id="proyectoForm" enctype="multipart/form-data">
         <h3 class="title is-5">Datos del solicitante</h3>
         <div class="form-row">
           <div class="field">
@@ -71,7 +71,7 @@
         <h3 class="title is-5">Evidencia y soporte</h3>
         <div class="field">
           <label for="archivo">Subir fotos o documentos</label>
-          <input type="file" id="archivo" multiple>
+          <input type="file" id="archivo" name="archivo">
         </div>
         <div class="field">
           <label for="url">Enlaces a redes sociales / sitio web </label>
@@ -96,7 +96,7 @@
 
         <div class="button-container">
           <button type="submit" class="button is-success" id="enviarBtn">Enviar datos</button>
-          <a href="../home/home.html" class="button-volver" id="homeBtn">Volver</a>
+          <a href="../home/home.php" class="button-volver" id="homeBtn">Volver</a>
         </div>
       </form>
 

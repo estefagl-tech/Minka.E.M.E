@@ -1,40 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Datos Personales</title>
+    <link rel="stylesheet" href="../CSS/datos_personales.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Datos Personales</title>
-  <link rel="stylesheet" href="../CSS/datos_personales.css">
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-</head>
+  <body>
+    <section class="fondo">
+      <div class="perfil-box">
+        <h1 class="titulo">Datos Personales</h1>
 
-<body>
-  <section class="fondo">
-    <div class="perfil-box">
+        <label for="nombre">Nombre</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          placeholder="Nombre completo"
+        />
 
-      <h1 class="titulo">Datos Personales</h1>
+        <label for="correo">Correo electrónico</label>
+        <input
+          type="email"
+          id="correo"
+          name="correo"
+          placeholder="tunombre@gmail.com"
+        />
 
-      <label for="nombre">Nombre</label>
-      <input type="text" id="nombre" name="nombre" placeholder="Nombre completo">
+        <div class="botones">
+          <button
+            type="submit"
+            class="btn-primario"
+            name="cambiarBtn"
+            id="cambiarBtn"
+          >
+            Cambiar Contraseña
+          </button>
+          <button
+            type="submit"
+            class="btn-secundario"
+            name="cerrarBtn"
+            id="cerrarBtn"
+          >
+            Cerrar Sesión
+          </button>
+        </div>
 
-      <label for="correo">Correo electrónico</label>
-      <input type="email" id="correo"  name ="correo" placeholder="tunombre@gmail.com">
-
-      <div class="botones">
-        <button  type="submit" class="btn-primario" name="cambiarBtn" id="cambiarBtn">Cambiar Contraseña</button>
-        <button type="submit" class="btn-secundario" name="cerrarBtn" id="cerrarBtn">Cerrar Sesión</button>
+        <button
+          class="btn-volver"
+          id="volverBtn"
+          id="volverBtn"
+          data-link="../home/home.php"
+        >
+          Volver
+        </button>
+        <div class="logo">
+          <div class="logo-circulo">M</div>
+          <span>MINKA</span>
+        </div>
       </div>
+    </section>
 
-      <button class="btn-volver" id="volverBtn" id="volverBtn" data-link="../home/home.html">Volver</button>
-      <div class="logo">
-        <div class="logo-circulo">M</div>
-        <span>MINKA</span>
-      </div>
-
-    </div>
-  </section>
-
-  <script src="../JS/datos_personales.js"></script>
-</body>
-
+    <script src="../JS/datos_personales.js"></script>
+  </body>
 </html>
