@@ -94,11 +94,11 @@ document.addEventListener("DOMContentLoaded", () => {
           Swal.fire({
             icon: "success",
             title: "Gracias por tu apoyo",
-            text: `Tu apoyo para "${causaSeleccionada}" fue registrado correctamente`
+            text: `Tu apoyo para "${causaSeleccionada}" fue registrado correctamente`,
           }).then(() => {
             document.getElementById("apoyoForm").reset();
 
-            window.location.href = "../home/home.html";
+            window.location.href = "../home/home.php";
           });
         } else {
           Swal.fire({
@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
       cancelButtonText: "Cancelar",
     }).then((result) => {
       if (result.isConfirmed) {
-        window.location.href = "../home/home.html";
+        window.location.href = "../home/home.php";
       }
     });
   });

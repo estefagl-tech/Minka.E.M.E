@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "Bienvenido",
             text: `Hola ${usuario} 🎉`,
           }).then(() => {
-            window.location.href = "../home/home.html";
+            window.location.href = "../home/home.php";
           });
         } else {
           Swal.fire({

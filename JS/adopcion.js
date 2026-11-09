@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "Solicitud enviada",
             text: `La solicitud para adoptar a ${mascotaSeleccionada} fue enviada correctamente`,
           }).then(() => {
-            window.location.href = "../home/home.html";
+            window.location.href = "../home/home.php";
           });
         } else {
           Swal.fire({

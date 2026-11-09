@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     Swal.fire({
       icon: "info",
       title: "Función en construcción",
-      text: "La opción para cambiar contraseña estará disponible pronto 🔒"
+      text: "La opción para cambiar contraseña estará disponible pronto 🔒",
     });
   });
 
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     Swal.fire({
       icon: "success",
       title: "Sesión cerrada",
-      text: "Has cerrado sesión correctamente 🚪"
+      text: "Has cerrado sesión correctamente 🚪",
     }).then(() => {
       window.location.href = "../HTML/login.html";
     });
@@ -38,10 +38,10 @@ document.addEventListener("DOMContentLoaded", () => {
       text: "Regresarás al inicio 🏠",
       showCancelButton: true,
       confirmButtonText: "Sí, volver",
-      cancelButtonText: "Cancelar"
+      cancelButtonText: "Cancelar",
     }).then((result) => {
       if (result.isConfirmed) {
-        window.location.href = volverBtn.dataset.link; 
+        window.location.href = volverBtn.dataset.link;
       }
     });
   });

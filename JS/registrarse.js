@@ -8,19 +8,28 @@ document.addEventListener("DOMContentLoaded", () => {
     const nombre = document.getElementById("nombre").value.trim();
     const apellidos = document.getElementById("apellidos").value.trim();
     const tipo_documento = document.getElementById("tipoDocumento").value;
-    const numero_documento = document.getElementById("numeroDocumento").value.trim();
+    const numero_documento = document
+      .getElementById("numeroDocumento")
+      .value.trim();
     const departamento = document.getElementById("departamento").value.trim();
     const municipio = document.getElementById("municipio").value.trim();
     const telefono = document.getElementById("telefono").value.trim();
     const correo = document.getElementById("correo").value.trim();
     const contraseña = document.getElementById("contraseña").value.trim();
-    const user = correo; // Usamos el correo como identificador de usuario único
+    const user = correo; 
 
-    if (!nombre || !apellidos || !correo || !contraseña || !tipo_documento || !numero_documento) {
+    if (
+      !nombre ||
+      !apellidos ||
+      !correo ||
+      !contraseña ||
+      !tipo_documento ||
+      !numero_documento
+    ) {
       Swal.fire({
         icon: "error",
         title: "Campos obligatorios",
-        text: "Debes completar todos los campos requeridos."
+        text: "Debes completar todos los campos requeridos.",
       });
       return;
     }
@@ -42,24 +51,24 @@ document.addEventListener("DOMContentLoaded", () => {
       method: "POST",
       body: formData,
     })
-    .then(response => response.text())
-    .then(data => {
-      if (data.trim() === "OK") {
-        Swal.fire({
-          icon: "success",
-          title: "Registro exitoso",
-          text: `Bienvenido/a ${nombre} 🎉`
-        }).then(() => {
-          window.location.href = "../HTML/login.html";
-        });
-      } else {
-        Swal.fire({
-          icon: "error",
-          title: "Error",
-          text: data
-        });
-      }
-    });
+      .then((response) => response.text())
+      .then((data) => {
+        if (data.trim() === "OK") {
+          Swal.fire({
+            icon: "success",
+            title: "Registro exitoso",
+            text: `Bienvenido/a ${nombre} 🎉`,
+          }).then(() => {
+            window.location.href = "../HTML/login.html";
+          });
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "Error",
+            text: data,
+          });
+        }
+      });
   });
 
   if (homeBtn) {
@@ -71,10 +80,10 @@ document.addEventListener("DOMContentLoaded", () => {
         icon: "question",
         showCancelButton: true,
         confirmButtonText: "Sí, regresar",
-        cancelButtonText: "Cancelar"
+        cancelButtonText: "Cancelar",
       }).then((result) => {
         if (result.isConfirmed) {
-          window.location.href = "../home/home.html";
+          window.location.href = "../home/home.php";
         }
       });
     });

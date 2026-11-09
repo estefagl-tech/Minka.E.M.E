@@ -1,9 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-
   const form = document.getElementById("proyectoForm");
 
   form.addEventListener("submit", (event) => {
-
     event.preventDefault();
 
     const titulo = document.getElementById("titulo").value.trim();
@@ -16,28 +14,32 @@ document.addEventListener("DOMContentLoaded", () => {
     const acepto = document.querySelector("input[name='acepto']").checked;
 
     if (!titulo || !descripcion || !objetivo || !tipo) {
-
       Swal.fire({
         icon: "error",
         title: "Campos obligatorios",
-        text: "Completa todos los campos requeridos"
+        text: "Completa todos los campos requeridos",
       });
 
       return;
     }
 
     if (!acepto) {
-
       Swal.fire({
         icon: "warning",
         title: "Confirmacion requerida",
-        text: "Debes aceptar para continuar"
+        text: "Debes aceptar para continuar",
       });
 
       return;
     }
 
     const formData = new FormData();
+
+    const archivo = document.getElementById("archivo").files[0];
+
+    if (archivo) {
+      formData.append("archivo", archivo);
+    }
 
     formData.append("titulo", titulo);
     formData.append("descripcion", descripcion);
@@ -49,46 +51,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
     fetch("../PHP/causas.php", {
       method: "POST",
-      body: formData
+      body: formData,
     })
-    .then(response => response.text())
-    .then(data => {
+      .then((response) => response.text())
+      .then((data) => {
+        if (data.trim() === "OK") {
+          Swal.fire({
+            icon: "success",
+            title: "Causa enviada",
+            text: "La causa fue registrada correctamente",
+          }).then(() => {
+            form.reset();
 
-      if (data.trim() === "OK") {
-
-        Swal.fire({
-          icon: "success",
-          title: "Causa enviada",
-          text: "La causa fue registrada correctamente"
-        }).then(() => {
-
-          form.reset();
-
-          window.location.href = "../home/home.html";
-
-        });
-
-      } else {
-
+            window.location.href = "../home/home.php";
+          });
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "Error",
+            text: data,
+          });
+        }
+      })
+      .catch(() => {
         Swal.fire({
           icon: "error",
           title: "Error",
-          text: data
+          text: "No se pudo conectar con el servidor",
         });
-
-      }
-
-    })
-    .catch(() => {
-
-      Swal.fire({
-        icon: "error",
-        title: "Error",
-        text: "No se pudo conectar con el servidor"
       });
-
-    });
-
   });
-
 });
