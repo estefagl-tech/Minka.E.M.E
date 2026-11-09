@@ -15,6 +15,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $usuario_id = $_SESSION['id'] ?? 1;
 
+    $imagen = "";
+
+    if (isset($_FILES['archivo']) && $_FILES['archivo']['error'] == 0) {
+
+        $imagen = time() . "_" . $_FILES['archivo']['name'];
+
+        move_uploaded_file(
+            $_FILES['archivo']['tmp_name'],
+            "../imagenes/" . $imagen
+        );
+    }
+
     $sql = "INSERT INTO causas
     (
         usuario_id,
@@ -24,7 +36,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         tipo,
         direccion,
         fecha,
-        url
+        url,
+        imagen
     )
     VALUES
     (
@@ -35,7 +48,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         '$tipo',
         '$direccion',
         '$fecha',
-        '$url'
+        '$url',
+        '$imagen'
     )";
 
     if ($conn->query($sql) === TRUE) {

@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 require("conexion.php");
 
@@ -16,32 +15,32 @@ if (isset($_POST['registrar'])) {
     $password = $_POST['password'] ?? '';
     $user = $_POST['user'] ?? '';
 
-    $sql = "INSERT INTO usuarios
-    (
-        nombre,
-        apellidos,
-        tipo_documento,
-        numero_documento,
-        departamento,
-        municipio,
-        telefono,
-        correo,
-        password,
-        user
-    )
-    VALUES
-    (
-        '$nombre',
-        '$apellidos',
-        '$tipo_documento',
-        '$numero_documento',
-        '$departamento',
-        '$municipio',
-        '$telefono',
-        '$correo',
-        '$password',
-        '$user'
-    )";
+    $sql = "INSERT INTO usuarios 
+            (
+                nombre, 
+                apellidos, 
+                tipo_documento, 
+                numero_documento, 
+                departamento, 
+                municipio, 
+                telefono, 
+                correo, 
+                password, 
+                user
+            ) 
+            VALUES 
+            (
+                '$nombre', 
+                '$apellidos', 
+                '$tipo_documento', 
+                '$numero_documento', 
+                '$departamento', 
+                '$municipio', 
+                '$telefono', 
+                '$correo', 
+                '$password', 
+                '$user'
+            )";
 
     if ($conn->query($sql) === TRUE) {
         echo "OK";
@@ -55,14 +54,13 @@ if (isset($_POST['login'])) {
     $user = $_POST['user'] ?? '';
     $password = $_POST['password'] ?? '';
 
-    $sql = "SELECT * FROM usuarios
-            WHERE user='$user'
-            AND password='$password'";
+    $sql = "SELECT * FROM usuarios 
+            WHERE user = '$user' 
+            AND password = '$password'";
 
     $resultado = $conn->query($sql);
 
     if ($resultado->num_rows > 0) {
-
         $datos = $resultado->fetch_assoc();
 
         $_SESSION['id'] = $datos['id'];
@@ -70,14 +68,10 @@ if (isset($_POST['login'])) {
         $_SESSION['nombre'] = $datos['nombre'];
 
         echo "OK";
-
     } else {
-
         echo "Usuario o contraseña incorrectos";
-
     }
 }
 
 $conn->close();
-
 ?>

@@ -1,63 +1,59 @@
 <?php
-
 require("conexion.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $nombre = $_POST['nombreMascota'];
-    $edad = $_POST['edadMascota'];
-    $especie = $_POST['especie'];
-    $sexo = $_POST['sexo'];
-    $descripcion = $_POST['descripcion'];
-    $informacion = $_POST['informacion'];
+    $nombre = $_POST['nombreMascota'] ?? '';
+    $edad = $_POST['edadMascota'] ?? '';
+    $especie = $_POST['especie'] ?? '';
+    $sexo = $_POST['sexo'] ?? '';
+    $descripcion = $_POST['descripcion'] ?? '';
+    $informacion = $_POST['informacion'] ?? '';
 
     $disponible = 1;
+    $foto = "";
 
-    $foto = $_FILES['fotoMascota']['name'];
-    $rutaTemporal = $_FILES['fotoMascota']['tmp_name'];
+    if (isset($_FILES['fotoMascota']) && $_FILES['fotoMascota']['error'] == 0) {
+        // Añadimos time() para evitar que se sobrescriban archivos con el mismo nombre
+        $foto = time() . "_" . $_FILES['fotoMascota']['name'];
+        $rutaTemporal = $_FILES['fotoMascota']['tmp_name'];
+        $carpetaDestino = "../imagenes/";
 
-    $carpetaDestino = "../imagenes/";
-
-    move_uploaded_file(
-        $rutaTemporal,
-        $carpetaDestino . $foto
-    );
-
-    $sql = "INSERT INTO mascotas
-    (
-        nombre,
-        edad,
-        especie,
-        sexo,
-        descripcion,
-        foto,
-        informacion,
-        disponible
-    )
-    VALUES
-    (
-        '$nombre',
-        '$edad',
-        '$especie',
-        '$sexo',
-        '$descripcion',
-        '$foto',
-        '$informacion',
-        '$disponible'
-    )";
-
-    if ($conn->query($sql) === TRUE) {
-
-        echo "OK";
-
-    } else {
-
-        echo "Error SQL: " . $conn->error;
-
+        move_uploaded_file(
+            $rutaTemporal,
+            $carpetaDestino . $foto
+        );
     }
 
+    $sql = "INSERT INTO mascotas 
+            (
+                nombre, 
+                edad, 
+                especie, 
+                sexo, 
+                descripcion, 
+                foto, 
+                informacion, 
+                disponible
+            ) 
+            VALUES 
+            (
+                '$nombre', 
+                '$edad', 
+                '$especie', 
+                '$sexo', 
+                '$descripcion', 
+                '$foto', 
+                '$informacion', 
+                '$disponible'
+            )";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "OK";
+    } else {
+        echo "Error SQL: " . $conn->error;
+    }
 }
 
 $conn->close();
-
 ?>
