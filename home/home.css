@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   margin: 0;
   background: #fff;
   color: #333;
@@ -26,7 +26,7 @@ header {
 .logo-circle {
   width: 32px;
   height: 32px;
-  background: #c6a5f5; 
+  background: #c6a5f5;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -36,10 +36,10 @@ header {
   color: #000;
   font-family: cursive;
   text-decoration: none;
-  cursor: pointer;      
+  cursor: pointer;
 }
 .logo-circle:hover {
-  background: #b28ae6; 
+  background: #b28ae6;
 }
 .logo-text {
   font-family: cursive;
@@ -50,7 +50,7 @@ header {
 
 header nav {
   display: flex;
-  gap: 12px; 
+  gap: 12px;
 }
 
 .usuario {
@@ -71,8 +71,13 @@ h1 {
   margin: 1rem 0;
   font-size: 1.8rem;
 }
-.highlight { color: #6a1b9a; font-weight: bold; }
-.buttons { margin: 1.5rem 0; }
+.highlight {
+  color: #6a1b9a;
+  font-weight: bold;
+}
+.buttons {
+  margin: 1.5rem 0;
+}
 
 .buttons {
   display: flex;
@@ -81,7 +86,8 @@ h1 {
   margin: 1.5rem 0;
 }
 
-a.primary, button.primary {
+a.primary,
+button.primary {
   background: #6a1b9a;
   color: #fff;
   padding: 0.75rem 1.4rem;
@@ -93,14 +99,17 @@ a.primary, button.primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: none; 
+  border: none;
   outline: none;
   cursor: pointer;
   box-sizing: border-box;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
 }
 
-a.primary:hover, button.primary:hover {
+a.primary:hover,
+button.primary:hover {
   background: #4a0f7a;
   transform: scale(1.03);
 }
@@ -141,7 +150,8 @@ a.secondary:hover {
   font-weight: bold;
 }
 
-.explorar, .adopcion {
+.explorar,
+.adopcion {
   padding: 2rem;
   background: #fafafa;
 }
@@ -173,7 +183,7 @@ button.filter.active {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
   align-items: stretch;
 }
@@ -186,22 +196,28 @@ button.filter.active {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
 }
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 .card img {
   width: 100%;
-  height: 200px;        
-  object-fit: cover;   
+  height: 200px;
+  object-fit: cover;
   border-radius: 10px;
   margin-bottom: 1rem;
 }
-.card span { color: #6a1b9a; font-weight: bold; }
+.card span {
+  color: #6a1b9a;
+  font-weight: bold;
+}
 
-button.support, a.support {
+button.support,
+a.support {
   background: #6a1b9a;
   color: #fff;
   padding: 0.6rem 1.2rem;
@@ -210,16 +226,27 @@ button.support, a.support {
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
 }
-button.support:hover, a.support:hover {
+button.support:hover,
+a.support:hover {
   background: #3e8e41;
   transform: scale(1.05);
 }
 
-.formulario h2 { text-align: center; color: #6a1b9a; }
-.formulario label { display: block; margin-top: 1rem; font-weight: bold; }
-.formulario input, .formulario textarea {
+.formulario h2 {
+  text-align: center;
+  color: #6a1b9a;
+}
+.formulario label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+.formulario input,
+.formulario textarea {
   width: 100%;
   padding: 0.6rem;
   margin-top: 0.5rem;
@@ -231,22 +258,51 @@ button.support:hover, a.support:hover {
   padding: 2rem;
   background: #fdf6f0;
 }
-.funciona h2 { color: #6a1b9a; }
-.steps { display: flex; gap: 1.5rem; flex-wrap: wrap; }
-.step { flex: 1; background: #fff; padding: 1rem; border-radius: 8px; border: 1px solid #eee; }
-.step h3 { color: #ff7043; font-size: 1.5rem; }
+.funciona h2 {
+  color: #6a1b9a;
+}
+.steps {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.step {
+  flex: 1;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+.step h3 {
+  color: #ff7043;
+  font-size: 1.5rem;
+}
 
 .empresas-dark {
   background: #222;
   color: #fff;
   padding: 2rem;
 }
-.empresas-dark h2 { color: #fce833; }
-.empresas-dark h3 { margin: 0.5rem 0; }
-.empresas-dark .h3_barrio { color: #fce833; }
-.empresas-dark .h3_inverti { color: #faf4bb; }
-.empresas-dark p { color: #faf4bb; }
-.empresas-dark ul { margin-top: 1rem; list-style: none; padding: 0; }
+.empresas-dark h2 {
+  color: #fce833;
+}
+.empresas-dark h3 {
+  margin: 0.5rem 0;
+}
+.empresas-dark .h3_barrio {
+  color: #fce833;
+}
+.empresas-dark .h3_inverti {
+  color: #faf4bb;
+}
+.empresas-dark p {
+  color: #faf4bb;
+}
+.empresas-dark ul {
+  margin-top: 1rem;
+  list-style: none;
+  padding: 0;
+}
 .empresas-dark li::before {
   content: "✔ ";
   color: #ffeb3b;
@@ -257,7 +313,9 @@ button.support:hover, a.support:hover {
   padding: 2rem;
   text-align: center;
 }
-.empresas-purple button { margin-top: 1rem; }
+.empresas-purple button {
+  margin-top: 1rem;
+}
 
 footer {
   background: #222;
@@ -265,12 +323,16 @@ footer {
   padding: 2rem;
   text-align: center;
 }
-footer nav a { color: #fff; text-decoration: none; margin: 0 0.5rem; }
+footer nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
 
 .ofrecer {
   display: flex;
-  justify-content: center; 
-  margin-top: 2rem;      
+  justify-content: center;
+  margin-top: 2rem;
 }
 .ofrecer a.primary {
   background: #6a1b9a;
