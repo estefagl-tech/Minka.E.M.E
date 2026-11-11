@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minka - Comunidad</title>
     <link rel="stylesheet" href="home.css">
 </head>
@@ -64,9 +65,8 @@
             $resultado = $conn->query($sql);
 
             while ($fila = $resultado->fetch_assoc()) {
-                // Normalizamos el tipo de causa para que coincida perfectamente con los filtros de la interfaz
                 $tipoCausa = strtolower(trim($fila['tipo']));
-                $categoriaCausa = 'social'; // Valor por defecto
+                $categoriaCausa = 'social';
 
                 if (strpos($tipoCausa, 'social') !== false) {
                     $categoriaCausa = 'social';

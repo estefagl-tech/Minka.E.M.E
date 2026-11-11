@@ -221,3 +221,90 @@ textarea:focus {
   font-weight: bold;
   margin-left: 4px;
 }
+
+@media (max-width: 768px) {
+
+  .container {
+    width: 95%;
+    padding: 2rem 1.5rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .form-row.center-field .field {
+    max-width: 100%;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 1.5rem 1rem;
+  }
+
+  h1.title {
+    font-size: 1.7rem;
+  }
+
+  h3.title.is-5 {
+    font-size: 1.1rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-row.center-field .field {
+    max-width: 100%;
+  }
+
+  .field label {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+
+  .checkbox-label {
+    align-items: flex-start;
+  }
+
+  .button.is-success,
+  .button-volver {
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+}
+
+@media (max-width: 320px) {
+
+  h1.title {
+    font-size: 1.4rem;
+  }
+
+  h3.title.is-5 {
+    font-size: 1rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+}

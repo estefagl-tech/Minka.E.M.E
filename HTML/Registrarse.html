@@ -1,125 +1,173 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Registro</title>
-    <link rel="stylesheet" href="../CSS/registrarse.css" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse - MINKA</title>
+
+    <link rel="stylesheet" href="../CSS/registrarse.css">
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  </head>
 
-  <body>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
     <section class="fondo">
-      <div class="formulario">
-        <form action="" method="post" id="RegistrarseForm"></form>
-        <h1 class="titulo">Registrarse</h1>
-        <p class="subtitulo">Completa tus datos personales</p>
 
-        <label for="nombre">Nombre <span class="obligatorio">*</span></label>
-        <input
-          type="text"
-          id="nombre"
-          name="nombre"
-          placeholder="Nombre"
-          required
-        />
+        <div class="formulario">
 
-        <label for="apellidos"
-          >Apellidos <span class="obligatorio">*</span></label
-        >
-        <input
-          type="text"
-          id="apellidos"
-          name="apellidos"
-          placeholder="Apellidos"
-          required
-        />
+            <form action="" method="post" id="RegistrarseForm">
 
-        <label for="tipoDocumento"
-          >Tipo de documento <span class="obligatorio">*</span></label
-        >
-        <select id="tipoDocumento" name="tipo_documento" required>
-          <option value="">Seleccione...</option>
-          <option value="CC">Cédula de ciudadanía</option>
-          <option value="TI">Tarjeta de identidad</option>
-          <option value="CE">Cédula de extranjería</option>
-          <option value="PP">Pasaporte</option>
-        </select>
+                <h1 class="titulo">Registrarse</h1>
 
-        <label for="numeroDocumento"
-          >Número de documento <span class="obligatorio">*</span></label
-        >
-        <input
-          type="number"
-          id="numeroDocumento"
-          name="numero_documento"
-          placeholder="Número de documento"
-          required
-        />
-        <label for="departamento">Departamento </label>
-        <input
-          type="text"
-          id="departamento"
-          name="departamento"
-          placeholder="Departamento"
-          required
-        />
-        <label for="municipio">Municipio</label>
-        <input
-          type="text"
-          id="municipio"
-          name="municipio"
-          placeholder="Municipio"
-          required
-        />
-        <label for="telefono"
-          >Teléfono <span class="obligatorio">*</span></label
-        >
-        <input
-          type="tel"
-          id="telefono"
-          name="telefono"
-          placeholder="Teléfono"
-          required
-        />
-        <label for="correo"
-          >Correo electrónico <span class="obligatorio">*</span></label
-        >
-        <input
-          type="email"
-          id="correo"
-          name="correo"
-          placeholder="tunombre@gmail.com"
-          required
-        />
+                <p class="subtitulo">
+                    Completa tus datos personales
+                </p>
 
-        <label for="contraseña"
-          >Contraseña <span class="obligatorio">*</span></label
-        >
-        <input
-          type="password"
-          id="contraseña"
-          name="contraseña"
-          placeholder="Contraseña"
-          required
-        />
+                <label for="nombre">
+                    Nombre
+                    <span class="obligatorio">*</span>
+                </label>
 
-        <button type="submit" class="btn-primario" id="continuarBtn">
-          Continuar
-        </button>
-        <button
-          type="submit"
-          class="btn-secundario"
-          onclick="window.location.href = '../HTML/login.html'"
-        >
-          Iniciar sesion
-        </button>
+                <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Ingresa tu nombre"
+                    required>
 
-        <div class="logo">
-          <div class="logo-circulo">M</div>
-          <span>MINKA</span>
+                <label for="apellidos">
+                    Apellidos
+                    <span class="obligatorio">*</span>
+                </label>
+
+                <input
+                    type="text"
+                    id="apellidos"
+                    name="apellidos"
+                    placeholder="Ingresa tus apellidos"
+                    required>
+
+                <label for="tipoDocumento">
+                    Tipo de documento
+                    <span class="obligatorio">*</span>
+                </label>
+
+                <select id="tipoDocumento" name="tipo_documento" required>
+                    <option value="">Seleccione...</option>
+                    <option value="CC">Cédula de ciudadanía</option>
+                    <option value="TI">Tarjeta de identidad</option>
+                    <option value="CE">Cédula de extranjería</option>
+                    <option value="PP">Pasaporte</option>
+                </select>
+
+                <label for="numeroDocumento">
+                    Número de documento
+                    <span class="obligatorio">*</span>
+                </label>
+
+                <input
+                    type="number"
+                    id="numeroDocumento"
+                    name="numero_documento"
+                    placeholder="Ingresa tu número de documento"
+                    required>
+
+                <label for="departamento">
+                    Departamento
+                    <span class="obligatorio">*</span>
+                </label>
+
+                <input
+                    type="text"
+                    id="departamento"
+                    name="departamento"
+                    placeholder="Ingresa tu departamento"
+                    required>
+
+                <label for="municipio">
+                    Municipio
+                    <span class="obligatorio">*</span>
+                </label>
+
+                <input
+                    type="text"
+                    id="municipio"
+                    name="municipio"
+                    placeholder="Ingresa tu municipio"
+                    required>
+
+                <label for="telefono">
+                    Teléfono
+                    <span class="obligatorio">*</span>
+                </label>
+
+                <input
+                    type="tel"
+                    id="telefono"
+                    name="telefono"
+                    placeholder="Ingresa tu teléfono"
+                    required>
+
+                <label for="correo">
+                    Correo electrónico
+                    <span class="obligatorio">*</span>
+                </label>
+
+                <input
+                    type="email"
+                    id="correo"
+                    name="correo"
+                    placeholder="ejemplo@gmail.com"
+                    required>
+
+                <label for="contraseña">
+                    Contraseña
+                    <span class="obligatorio">*</span>
+                </label>
+
+                <input
+                    type="password"
+                    id="contraseña"
+                    name="contraseña"
+                    placeholder="Crea una contraseña"
+                    required>
+
+                <button
+                    type="submit"
+                    class="btn-primario"
+                    id="continuarBtn">
+
+                    Continuar
+
+                </button>
+
+                <button
+                    type="button"
+                    class="btn-secundario"
+                    onclick="window.location.href='../HTML/login.html'">
+
+                    Iniciar sesión
+
+                </button>
+
+                <div class="logo">
+                    <div class="logo-circulo">M</div>
+                    <span>MINKA</span>
+                </div>
+
+            </form>
+
         </div>
-      </div>
+
     </section>
+
     <script src="../JS/registrarse.js"></script>
-  </body>
+
+</body>
+
 </html>

@@ -122,4 +122,53 @@ input:focus {
   margin-right: 5px;
 }
 
+@media (max-width: 768px) {
 
+  .perfil-box {
+    width: 90%;
+    max-width: 500px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .fondo {
+    padding: 15px;
+  }
+
+  .perfil-box {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .titulo {
+    font-size: 1.7rem;
+  }
+
+  .botones {
+    flex-direction: column;
+  }
+
+  .btn-primario,
+  .btn-secundario {
+    width: 100%;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+}
+
+@media (max-width: 320px) {
+
+  .perfil-box {
+    padding: 1rem;
+  }
+
+  .titulo {
+    font-size: 1.4rem;
+  }
+
+}

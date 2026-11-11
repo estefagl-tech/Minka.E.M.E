@@ -14,7 +14,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $foto = "";
 
     if (isset($_FILES['fotoMascota']) && $_FILES['fotoMascota']['error'] == 0) {
-        // Añadimos time() para evitar que se sobrescriban archivos con el mismo nombre
         $foto = time() . "_" . $_FILES['fotoMascota']['name'];
         $rutaTemporal = $_FILES['fotoMascota']['tmp_name'];
         $carpetaDestino = "../imagenes/";
